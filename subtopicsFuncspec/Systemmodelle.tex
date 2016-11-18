@@ -9,12 +9,10 @@ Der Benutzer kann hierbei mehrere Aktionen ausführen:
 \begin{itemize}
 \item Login durchführen
 \item Videos verwalten
-\item Den Status setzen
 \item Manuelle Speicherung beginnen
 \end{itemize}
 Um auf alle Funktionen zugreifen zu können muss sich der Benutzer zunächst auf der App einloggen. 
 Wenn der Benutzer sein aufgenommenes Videomaterial verwalten will kann er zum einen die Videos auf den Web-Service hochladen oder die Videos löschen.
-Des weiteren kann er den Status der "Aufnahme" auf aktiv/inaktiv setzen. Bei aktiv ist der Ringpuffer angeschaltet. 
 Außerdem kann man einen manuellen Speichervorgang ohne des Auslösen des Sensors beginnen um zum Beispiel.
 
 \subsection{Bedienung der Website}
@@ -33,6 +31,7 @@ Um den Service der App und der Website zu nutzen muss sich der Benutzer zu Begin
 Nun kann er den Login auf der Website oder App durchführen um die Funktionen beider Applikationen zu nutzen. 
 Ist der Benutzer eingeloggt kann er seine Benutzerdaten ändern und bereits hochgeladene Videodaten nach der Anonymisierung runterladen.
 Nach der Registrierung und Änderung von Benutzerdaten schickt der Web-Service eine Verifizierungs-E-Mail an den Benutzer.
+\section{Aktivitätsdiagramm}
 \subsection{Von Appstart bis Videofreigabe}
 \begin{center}
 \includegraphics[width=1\textwidth]{subtopicsFuncspec/systemModels/AKDiagramm.png}
@@ -44,7 +43,7 @@ Dieses Aktivitätsdiagramm beschreibt den Ablauf vom Start der App bis zur Freig
 \begin{description}
 \item Der Benutzer loggt sich mit seinen Anmeldedaten in die Applikation ein um die Funktionen zu nutzen.
 \end{description}
-\item Automatische oder Manuelle Speicherung
+\item Speicherung beginnen
 \begin{enumerate}
 \item Auslösen des G-Senors
 \begin{description}
