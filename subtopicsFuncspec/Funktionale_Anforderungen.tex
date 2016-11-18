@@ -1,45 +1,66 @@
-\section{Funktionale Anforderungen}
+\chapter{Funktionale Anforderungen}
 
-\section{Web-Interface}
+\section{App}
 \begin{description}
-\item[FA Anzeigen der Einlog-View] \hfill \\
-Ruft der Nutzer die Privacy-Crash-Cam-Webseite auf, so gelangt er zu der Einlog-View. Dort kann sich der Benutzer anmelden (FAxx) oder sich registrieren (FAxx).
+\item[FA Anzeigen der Einlog-Ansicht] \hfill \\
+Öffnet der Benutzer die App, so gelangt er in die Einlog-Ansicht. Dort kann er sich einloggen. Das Erstellen von Benutzeraccounts ist hier \textbf{nicht} möglich.
 
-\item[FA Erstellen eines Benutzeraccounts] \hfill \\
-Klickt der Benutzer auf "'Account erstellen"' so öffnet sich der Registrierungsdialog. Dort wird der Nutzer gebeten einen einzigartigen Benutzername und eine E-Mail Adresse angegeben. Zudem muss er ein Passwort auswählen und bestätigen. Klickt der Nutzer auf "'Registrierung abschließen"' werden die Eingaben überprüft. Nach dem Erstellen eines Benutzeraccounts sendet der Server eine Bestätigungsmail. Der Nutzer muss den dort enthaltenen Link klicken, um seinen Account zu verifizieren. Danach kann er sich auf der Webseite anmelden.
+\item[FA Einloggen in die App] \hfill \\
+Zum Einloggen in die App müssen User-Name und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte User (siehe FAxx) können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten App-Sitzung ausloggen, bevor er sich einloggen kann. Bei falschen Eingaben oder wenn der Nutzer bereits eingeloggt ist kehrt er zur Einlog-Ansicht zurück und erhält eine Fehlermeldung.
 
-\item[FA Löschen eines Benutzeraccounts] \hfill \\
-Klickt ein Benutzer in der Menüleiste auf "'Account Löschen"', so wird ein Bestätigungsdialog geöffnet. Bestätigt der Nutzer, so wird er ausgeloggt. Daraufhin werden alle, von ihm hochgeladenen Videos vom Server und daraufhin seine Accountdaten gelöscht.
+\item[FA Ausloggen von einem Benutzeraccount] \hfill \\
+Klickt ein Benutzer im Menü auf "'ausloggen"', so wird er auf die Einlog-Ansicht zurückgeleitet. Schließt ein Nutzer die App, so wird er automatisch ausgeloggt.
 
-\item[FA Einloggen auf die Webseite] \hfill \\
-Zum Einloggen auf die Webseite müssen User-Name und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte User (siehe FAxx) können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten Sitzung ausloggen, bevor er sich einloggen kann.
+\item[FA Anzeigen der Vorschau im Beobachtungsmodus] \hfill \\
+Hat ein Benutzer die App gestartet, so gelangt er in den Beobachtungsmodus. Dort wird ihm ein Preview von dem Ausschnitt angezeigt, den die Kamera aufnimmt wenn die Beobachtung gestartet wird. In dem Beobachtungsmpdus befinden sich zudem ein "'Kamerabutton"' zum starten/stoppen der Beobachtung (FAxx und FAxx).
 
-\item[FA Ausloggen von der Webseite] \hfill \\
-Klickt ein Benutzer in der Menüleiste auf "'Ausloggen"' so wird er auf die Einlog-View zurückgeleitet. Schließt ein Nutzer die Webseite, so wird er automatisch ausgeloggt.
+\item[FA Starten der Beobachtung] \hfill \\
+Ist die App im Beobachtungsmodus, so startet die App die Beobachtung automatisch. Nun wird der Ringpuffer beschrieben (FAxx). Dies wird dem Benutzer durch ein animiertes Symbol im unteren linken Bilderschirmrand visualisiert. Zudem ist nun der "'Crash-Button"' verfügbar über man manuell die Persistierung des Videos (FAxx) auslösen kann.
 
-\item[FA Anzeigen der Menüleiste] \hfill \\
-Befindet sich der Nutzer in einer anderen Ansicht als der Einlog-View, so befindet sich am linken Rand der Websteite die Menüleiste. Dort kann der Nutzer sich ausloggen (FAxx), seinen Account löschen (FAxx), die Datenschutzerklärung einsehen (FAxx) oder das Impressum einsehen (FAxx).
+\item[FA Stoppen der Beobachtung] \hfill \\
+Wenn der Benutzer die Beobachtungsansicht während der Beobachtung verlässt, oder die App schließt, wird die Beobachtung automatisch beendet.
 
-\item[FA Anzeigen einer Liste der anonymisierten Videos] \hfill \\
-Hat sich ein Benutzer eingeloggt wird er automatisch auf diese Ansicht weitergeleitet. Hier werden die, von dem Nutzer hochgeladenen Videos chronologisch aufgelistet. Der Nutzer kann Videos herunterladen (FAxx), löschen (FAxx), ein Preview einsehen (FAxx) oder die Videoinformationen einsehen (FAxx).
+\item[FA Beschreiben des Ringpuffers] \hfill \\
+Wurde die Beobachtung gestartet so wird der Ringpuffer mit dem aufgenommenen Bildmaterial beschrieben. Ist der Puffer voll, so wird stets zuerst aufgenommenes Material auch zuerst überschrieben. Der Ringpuffer ist für den Benutzer nicht zugänglich. Das Bildmaterial auf dem Puffer ist noch nicht verschlüsselt.
 
-\item[FA Herunterladen von anonymisierten Videos] \hfill \\
-Durch einen Klick wird eine Speicherdialog geöffnet. Nachdem der Nutzer einen Speicherort ausgewählt hat wird das Video heruntergeladen.
+\item[FA Auslösen des G-Sensors] \hfill \\
+Werden die in NAxx bis NAxx definierten Richtwerte des G-Sensors überschritten, so wird die Persistierung des Videos iniziiert. Als Auslöser der Persistierung wird das Auslösen durch G-Sensor, sowie die Messwerte des G-Sensors zu dem Zeitpunkt den Metadaten des Videos beim Speichern hinzugefügt.
 
-\item[FA Löschen eines anonymisierten Videos] \hfill \\
-Durch den Klick auf das "'Löschen-Symbol"' wird ein Bestätigungsdialog geöffnet. Falls der Benutzer bestätigt wird das Video aus der Liste seiner hochgeladenen Videos entfernt und vom Server gelöscht.
+\item[FA Auslösen der manuellen Aufnahmefunktion] \hfill \\
+Drückt der Benutzer den "'Crash-Button"' so wird die Persistierung des Videos iniziiert. Als Auslöser der Persistierung wird das manuelle Auslösen den Metadaten des Videos beim Speichern hinzugefügt.
 
-\item[FA Preview eines anonymisierten Videos] \hfill \\
-Durch den Klick auf das "'Preview-Symbols"' wird ein Fenster geöffnet, in dem der Nutzer ein Preview des anonymisierten Videos angezeigt wird.
+\item[FA Persistieren eines Videos] \hfill \\
+Wurde eine Persistierung ausgelöst so speichert die App den Inhalt des Ringpuffers, sowie die folgende von der Kamera aufgenommene Minute in ein Video. Während der Persistierung wird nicht weiter Beobachtet. Vor dem Speichern des Videos werden relevante Metadaten (Ort der Aufnahme, Zeit der Aufnahme, Grund der Aufnahme) eingefügt. Die Tonspur des Videos wird verworfen. Beim Speichern des Videos verschlüsselt die App das Video (FAxx). Ist die App mit der Persistierung fertig, wird die Beobachtung automatisch fortgesetzt.
+
+\item[FA Verschlüsseln eines Videos] \hfill \\
+Vor dem Speichern eines Videos durch die App wird das Video verschlüsselt. Hierbei wird das unter Kaptiel X.Y defininierte Verschlüsselungsverfahren angewandt.
+
+\item[FA Anzeigen des Menüs] \hfill \\
+Drückt der Benutzer den "'Menü-Button"' in der oberen linken Ecke des Bildschirms, so öffnet sich das Menü. Beobachtet das Handy, wenn das Menü geöffnet wird, wird die Aufnahme nicht gestoppt. In dem Menü hat der Benutzer die Möglichkeit in den Beobachtungsmodus zu gehen (FAxx), die gespeicherten Videos anzuzeigen (FAxx), die Einstellungen anzuzeigen (FAxx), die Datenschutzerklärung anzuzeigen (FAxx) oder sich auszuloggen (FAxx).
+
+\item[FA Anzeigen der Liste der persistierten Videos] \hfill \\
+Wählt der Benutzer im Menü die Option "'Meine Videos"', so gelangt zu einer Ansicht, in dem ihm seine persistierten Videos chronologisch aufgelistet werden. Der Nutzer kann Videos hochladen (FAxx), löschen (FAxx), oder Videoinformationen einsehen (FAxx).
+
+\item[FA Hochladen von gespeicherten Videos] \hfill \\
+Klickt der Nutzer auf den "'Upload-Button"', wird ein Dialog aufgerufen, in dem der Nutzer darauf hingewiesen wird, dass mobile Daten anfallen werden. Wenn der Benutzer akzeptiert, schickt die App eine Anfrage an den Server. Dieser beantwortet die Anfrage falls Ressourcen verfügbar sind und erlaubt den Upload. In jedem Fall wird dem Nutzer ein Erfolgs- bzw. Misserfolgsdialog gezeigt. Von diesem aus kann er zu der Liste seiner Videos zurückkehren.
+
+\item[FA Löschen von gespeicherten Videos] \hfill \\
+Klickt der Benutzer auf das "'Löschen-Symbol"', so wird ein Bestätigungsdialog geöffnet. Falls der Benutzer bestätigt wird das Video aus der Liste seiner persistierten Videos entfernt und vom Gerät gelöscht. Bricht der Benutzer den Dialog ab bleibt er in der Listenansicht seiner Videos.
+
+\item[FA Anzeigen einer Benachrichtigung zum Löschen von Videos] \hfill \\
+Beim einloggen in die App wird geprüft, ob ein Nutzer auf seinem Gerät persistierte Videos seit über 4 Wochen gespeichert hat. Ist dies so wird ihm ein Dialog angezeigt, der ihn auf diesen Umstand hinweist. Dort wird ihm angeboten, das Video zu löschen (FAxx). Bricht er den Dialog ab, gelangt er wie üblich in den Beobachtungsmodus.
 
 \item[FA Einsehen von Video-Daten der anonymisierten Videos] \hfill \\
-Durch den Klick auf das "'Info-Symbol"' wird ein Fenster geöffnet, dass dem Benutzer die Video-Metadaten (Erstellungsdatum, Datum der Anonymisierung, Größe, Auflösung, Dauer) anzeigt.
+Klickt der Benutzer das "'Info-Symbol"' wird ein Fenster geöffnet, dass dem Benutzer die Video-Metadaten (Erstellungsdatum, Datum der Anonymisierung, Größe, Auflösung, Dauer) anzeigt. Schließt der Nutzer das Fenster, kehrt er zu der Liste seiner Videos zurück.
+
+\item[FA Anzeigen der Einstellungen]
+Wählt der Benutzer im Menü die Option "'Einstellungen"', so werden dem Nutzer die Standardeinstellungen angezeigt (Auflösung, Bildwiederholrate, Größe Ringpuffer etc.) angezeigt.
 
 \item[FA Anzeigen der Datenschutzerklärung] \hfill \\
-Klickt ein Benutzer in der Menüleiste auf "Datenschutz", so wird eine Sicht geöffnet, in der der Nutzer die Datenschutzerklärung und das AGB einsehen kann.
+Wählt der Benutzer im Menü die Option "'Datenschutz"', so wird eine Sicht geöffnet, in der der Nutzer die Datenschutzerklärung und die AGB einsehen kann.
 
 \item[FA Anzeigen des Impressums] \hfill \\
-Klickt ein Benutzer in der Menüleiste auf "Impressum", so wird eine Sicht geöffnet, in der der Nutzer das Impressum einsehen kann.
+Wählt der Benutzer im Menü die Option "'Impressum"', so wird eine Sicht geöffnet, in der der Nutzer das Impressum einsehen kann.
 
 \end{description}
 
@@ -49,10 +70,7 @@ Klickt ein Benutzer in der Menüleiste auf "Impressum", so wird eine Sicht geöf
 Bekommt der Web-Service eine Anfrage von der App ein Video hochzuladen, so überprüft er zunächst, ob er die Anfrage bearbeiten kann, oder ob bereits zu viele andere Anfragen gestellt wurden (NAxx). Ist dies nicht der Fall, so speichert er das Video temporär und beginnt die Anonymisierung (FAxx-FAxx).
 
 \item[FA Entschlüsseln eines empfangenen Videos] \hfill \\
-Bevor der Web-Service die Bearbeitung des Videos beginnt, entschlüsselt er das empfangene verschlüsselte Video. Das entschlüsselte Video wird lokal temporär gespeichert.
-
-\item[FA Schätzen der Bearbeitungszeit] \hfill \\
-Nachdem das Video entschlüsselt wurde schätzt der Web-Service anhand der Länge und Auflösung des Videos den Bearbeitungsaufwand  ab und übermittelt eine Schätzzeit an die App.
+Bevor der Web-Service die Bearbeitung des Videos beginnt, entschlüsselt er das empfangene verschlüsselte Video. Hierbei wird das unter Kaptiel X.Y defininierte Verschlüsselungsverfahren angewandt. Das entschlüsselte Video wird lokal temporär gespeichert.
 
 \item[FA Identifizieren der relevanten Bildbereiche] \hfill \\
 Der Web-Service nimmt das entschlüsselte Video und lässt einen Bildfilter über das Video laufen, der die für die Anonymisierung relevanten Bildbereiche (Gesichter, Nummernschilder, etc.) erkennt. Die so ermittelteten Bereiche werden in einer Bitmaske gespeichert.
@@ -61,47 +79,48 @@ Der Web-Service nimmt das entschlüsselte Video und lässt einen Bildfilter übe
 Der Web-Service nimmt die in FAxx erstellte Bitmaske um die dort makierten relevanten Bildbereiche mithilfe eines Anonymisierungsfilters zu anonymisieren.
 
 \item[FA Abspeichern eines anonymisierten Videos] \hfill \\
-Nachdem das Video anonymisiert wurde, wird es lokal auf dem Server gespeichert und alle temporären Dateien gelöscht. Das gespeicherte Video wird der Videoverwaltung hinzugefügt damit es vom Benutzer eingesehen und bearbeitet werden kann.
+Nachdem das Video anonymisiert wurde, wird es lokal auf dem Server gespeichert und alle temporären Dateien gelöscht. Das gespeicherte Video wird der Videoverwaltung hinzugefügt damit es vom Benutzer eingesehen und bearbeitet werden kann. Wenn ein Benutzer, die maximale Anzahl Videos pro Account (NAxx) überschreitet, wir automatisch das älteste Video des Accounts auf dem Server gelöscht.
 \end{description}
 
-\section{App}
+\section{Web-Interface}
 \begin{description}
-\item[FA Starten der App] \hfill \\
+\item[FA Anzeigen der Einlog-Ansicht] \hfill \\
+Ruft der Nutzer die Privacy-Crash-Cam-Webseite auf, so gelangt er zu der Einlog-Ansicht. Dort kann sich der Benutzer anmelden (FAxx) oder sich registrieren (FAxx).
 
-\item[FA Einloggen in einen Benutzeraccount] \hfill \\
+\item[FA Erstellen eines Benutzeraccounts] \hfill \\
+Klickt der Benutzer auf "'Account erstellen"' so öffnet sich der Registrierungsdialog. Dort wird der Nutzer gebeten einen einzigartigen Benutzername und eine E-Mail Adresse angegeben. Zudem muss er ein Passwort auswählen und bestätigen. Klickt der Nutzer auf "'Registrierung abschließen"' werden die Eingaben überprüft. Schlägt dies fehl bleibt der Benutzer in dem Registrierungsdialog. Nach dem Erstellen eines Benutzeraccounts sendet der Server eine Bestätigungsmail. Der Nutzer muss den dort enthaltenen Link klicken, um seinen Account zu verifizieren. Danach kann er sich auf der Webseite anmelden.
 
-\item[FA Ausloggen von einem Benutzeraccount] \hfill \\
+\item[FA Löschen eines Benutzeraccounts] \hfill \\
+Klickt ein Benutzer in der Menüleiste auf "'Account Löschen"', so wird ein Bestätigungsdialog geöffnet. Bestätigt der Nutzer, so wird er ausgeloggt. Daraufhin werden alle, von ihm hochgeladenen Videos vom Server und daraufhin seine Accountdaten gelöscht.
 
-\item[FA Anzeigen der Vorschau im "Beobachtungsmodus"] \hfill \\
+\item[FA Einloggen auf die Webseite] \hfill \\
+Zum Einloggen auf die Webseite müssen Benutzername und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte User (siehe FAxx) können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten Web-Sitzung ausloggen, bevor er sich einloggen kann. Bei falschen Eingaben oder wenn der Nutzer bereits eingeloggt ist kehrt er zur Einlog-Ansicht zurück und erhält eine Fehlermeldung.
 
-\item[FA Beschreiben des Ringpuffers] \hfill \\
+\item[FA Ausloggen von der Webseite] \hfill \\
+Klickt ein Benutzer in der Menüleiste auf "'Ausloggen"' so wird er auf die Einlog-Ansicht zurückgeleitet. Schließt ein Nutzer die Webseite, so wird er automatisch ausgeloggt.
 
-\item[FA Auslösen des G-Sensors] \hfill \\
+\item[FA Anzeigen der Menüleiste] \hfill \\
+Befindet sich der Nutzer in einer anderen Ansicht als der Einlog-Ansicht, so befindet sich am linken Rand der Websteite die Menüleiste. Dort kann der Nutzer die Liste der anonymisierten Videos (FAxx), Datenschutzerklärung einsehen (FAxx), das Impressum einsehen (FAxx), sich ausloggen (FAxx), seinen Account löschen (FAxx).
 
-\item[FA Auslösen der manuellen Aufnahmefunktion] \hfill \\
+\item[FA Anzeigen der Liste der anonymisierten Videos] \hfill \\
+Hat sich ein Benutzer eingeloggt wird er automatisch auf diese Ansicht weitergeleitet. Hier werden die, von dem Nutzer hochgeladenen Videos chronologisch aufgelistet. Der Nutzer kann Videos herunterladen (FAxx), löschen (FAxx), ein Preview einsehen (FAxx) oder die Videoinformationen einsehen (FAxx).
 
-\item[FA Speichern eines Videos] \hfill \\
-Vor dem Speichern des Videos werden relevante Metadaten eingefügt (Ort, Zeit) und das Video verschlüsselt.
+\item[FA Herunterladen von anonymisierten Videos] \hfill \\
+Durch einen Klick wird eine Speicherdialog geöffnet. Nachdem der Nutzer einen Speicherort ausgewählt hat wird das Video heruntergeladen. Bricht der Benutzer den Dialog ab bleibt er in der Listenansicht seiner Videos.
 
-\item[FA Anzeigen des Menüs] \hfill \\
+\item[FA Löschen eines anonymisierten Videos] \hfill \\
+Durch den Klick auf das "'Löschen-Symbol"' wird ein Bestätigungsdialog geöffnet. Falls der Benutzer bestätigt wird das Video aus der Liste seiner hochgeladenen Videos entfernt und vom Server gelöscht. Bricht der Benutzer den Dialog ab bleibt er in der Listenansicht seiner Videos.
 
-\item[FA Navigieren im Menü] \hfill \\
+\item[FA Vorschau eines anonymisierten Videos] \hfill \\
+Klickt der Benutzer auf das "'Vorschau-Symbol"', so wird ein Fenster geöffnet, in dem der Nutzer ein Vorschau des anonymisierten Videos angezeigt wird.
 
-\item[FA Anzeigen der Einstellungen] \hfill \\
+\item[FA Einsehen von Video-Daten der anonymisierten Videos] \hfill \\
+Klickt der Benutzer auf das "'Info-Symbol"', so wird ein Fenster geöffnet, dass dem Benutzer die Video-Metadaten (Erstellungsdatum, Datum der Anonymisierung, Größe, Auflösung, Dauer) anzeigt.
 
 \item[FA Anzeigen der Datenschutzerklärung] \hfill \\
+Klickt der Benutzer in der Menüleiste auf "'Datenschutz"', so wird eine Sicht geöffnet, in der der Nutzer die Datenschutzerklärung und die AGB einsehen kann.
 
-\item[FA Bearbeiten von Einstellungen] \hfill \\
+\item[FA Anzeigen des Impressums] \hfill \\
+Klickt der Benutzer in der Menüleiste auf "'Impressum"', so wird eine Sicht geöffnet, in der der Nutzer das Impressum einsehen kann.
 
-\item[FA Anzeigen der gespeicherten Videos]
-
-\item[FA Löschen von gespeicherten Videos]
-
-\item[FA Anzeigen einer Benachrichtigung zum Löschen von Videos]
-
-\item[FA Hochladen von gespeicherten Videos]
-
-\item[FA Anzeigen der Meta-Daten von gespeicherten Videos]
-
-\item[FA Schließen der App]
 \end{description}
