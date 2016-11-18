@@ -1,10 +1,7 @@
 \section{Globale Testf\"alle}
 \subsection{Erkl\"arung zu den Testsuites der Qualit\"atssicherung}
-Um eine m\"oglichst fl\"achendeckende Qualita\"atssicherung zu ermo\"oglichen, werden wir im Folgenden zwischen verschiedenen Arten von Testabla\"aufen unterscheiden. Diese sollen automatisierte Tests sein und das Backend und Frontend testen. Das Ziel ist, ca 70 bis 80 Prozent des geschriebenen Codes ausf\"urhrlich zu testen. \\
-Wir teilen das Testen in mehrere Testsuites auf. Die erste grosse Testsuite sind die \textbf{Komponententests}. Diese testen die einzelnen Bestandteile der Software auf deren Funktionalit\"at. \\
-Die zweite Testsuite ist die \textbf{Integration-Testsuite}. In dieser Phase wird das Zusammenspiel von Server, Webinterface und Android-App getestet.  \\
-Die dritte Testsuite sind die \textbf{Systemtests}, bei denen das komplette System auf deren Funktionalit\"at \"uberpr\"uft wird. \\
-Als vierte und letzte Testsuite f\"uhre wir den Abnahmetest durch. Dieser testet die Software unter realen Bedingungen.
+Um eine m\"oglichst fl\"achendeckende Qualita\"atssicherung zu ermo\"oglichen, werden wir im Folgenden zwischen verschiedenen Arten von Testabla\"aufen unterscheiden. Diese sollen automatisierte Tests sein und das Backend und Frontend testen. Das Ziel ist, 80 Prozent des geschriebenen Codes ausf\"urhrlich zu testen. \\
+Wir teilen die Testphase in mehrere Teilphasen ein, um Struktur in das Testen zu bekommen.
 \subsubsection{Komponententests}
 Komponententests sind allgemein dazu da, um einzelne Komponenten der Software zu testen. In unserem Beispiel werden wir den Java-Server, die Android-App und das Webinterface auf deren Funktionalit\"at testen. 
 \subsubsection{Integration-Testsuite}
@@ -20,4 +17,4 @@ Der Kunde f\"uhrt auf der Anmeldeseite einen Log-In durch udn will nun seine ges
 Der G-Sensor des Ger\"ats l\"ost aus, da gerade ein Unfall geschehen ist. Nun wird das Video verschl\"usselt auf dem lokalen Speicherbereich abgelegt. Zudem wird es nun unter "noch nicht hochgeladene" Unf\"alle angezeigt. Die M\"oglichkeit zum hochladen, l\"oschen und umbenennen des Unfalls wird angezeigt und jede der M\"oglichkeiten funktioniert.
 
 \subsubsection{Anonymisierung des Videos auf dem Java-Server}
-Der Kunde hat einen Unfall aufgenommen und diesen lokal gespeichert. Nun bet\"atigt er die Funktion "Unfall hochladen". Das bereits lokal verschl\"usselte Video wird zum Server gesendet und dieser legt die Datei in das "/tmp"-Verzeichnis ab, um die Daten nur tempor\"ar zu speichern. Das Video wird anonymisiert und richtig auf dem Server abgelegt. Dem Usereintrag in der Datenbank wird um den Pfad zum neu abgespeicherten Video erg\"anzt, damit der Kunde das Video nun auch auf seiner App/Webinterface sehen kann.
+Der Kunde hat einen Unfall aufgenommen und diesen lokal gespeichert. Nun bet\"atigt er die Funktion "Unfall hochladen". Das bereits lokal verschl\"usselte Video wird zum Server gesendet und dieser legt die Datei in das tempor\"ares Verzeichnis ab. Das Video wird anonymisiert und richtig auf dem Server abgelegt. Dem Usereintrag in der Datenbank wird um den Pfad zum neu abgespeicherten Video erg\"anzt, damit der Kunde das Video nun auch auf seiner App/Webinterface sehen kann.
