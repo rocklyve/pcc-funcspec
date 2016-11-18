@@ -1,23 +1,15 @@
-\documentclass[11pt,a4paper]{scrreprt}
+\documentclass[a4paper, twoside, BCOR=20mm]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}	% german hyphenation, quotes, etc
 \usepackage{amsmath}
 \usepackage{paralist}
 \usepackage{amsfonts}
 \usepackage{acronym}
+\usepackage{enumerate}
 \usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{graphicx}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\hypersetup{ 					% ‘texdoc hyperref‘ for options
-	pdftitle={PSE PCC: Pflichtenheft},
-	pdfauthor={Giorgio Groß, Christoph Hörtnagl, David Laubenstein,  Josh Ramanowski,  Fabian Wenzel},
-	bookmarks=true,
-}
-%\author{Giorgio Groß, Christoph Hörtnagl, David Laubenstein,  Josh Ramanowski,  Fabian Wenzel}
-\title{Pflichtenheft: Crash- Cam}
-
 \usepackage[ngerman]{translator}
 %Paket laden
 \usepackage[
@@ -26,13 +18,17 @@ acronym,      %ein Abkürzungsverzeichnis erstellen
 toc,          %Einträge im Inhaltsverzeichnis
 section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
 {glossaries}
+\hypersetup{ 					% ‘texdoc hyperref‘ for options
+	pdftitle={PSE PCC: Pflichtenheft},
+	pdfauthor={Giorgio Groß, Christoph Hörtnagl, David Laubenstein,  Josh Ramanowski,  Fabian Wenzel},
+	bookmarks=true,
+}
 
 %Befehle für Abkürzungen
 \newacronym{KIT}{KIT}{Karlsruher Institut für Technologie}
 
 % KIT layout
 \usepackage{color}
-
 \definecolor{orange}{rgb}{1,0.5,0}
 \definecolor{mintgreen}{RGB}{50,161,137}
 \definecolor{gray}{RGB}{120,120,120}
@@ -60,15 +56,13 @@ section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
   		\color{mintgreen}\leaders\hrule height \headrulewidth\hfill}}				
 	\fancyfoot[LE,RO]{\thepage}
 
-
-
 \setcounter{tocdepth}{5}
 
 \begin{document}
 \include{./subtopicsFuncspec/Deckblatt}
-% \maketitle
-\tableofcontents
 \newpage
+\tableofcontents
+
 %content
 \include{./subtopicsFuncspec/Zielbestimmung}
 \include{./subtopicsFuncspec/Produkteinsatz}
