@@ -1,17 +1,72 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[11pt,a4paper]{scrreprt}
 \usepackage[utf8]{inputenc}
-\usepackage[german]{babel}
+\usepackage[german]{babel}	% german hyphenation, quotes, etc
 \usepackage{amsmath}
+\usepackage{paralist}
 \usepackage{amsfonts}
+\usepackage{acronym}
 \usepackage{hyperref}
 \usepackage{amssymb}
+\usepackage{caption}
 \usepackage{graphicx}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\author{Giorgio Groß, Christoph Hörtnagl, David Laubenstein,  Josh Ramanowski,  Fabian Wenzel}
+\hypersetup{ 					% ‘texdoc hyperref‘ for options
+	pdftitle={PSE PCC: Pflichtenheft},
+	pdfauthor={Giorgio Groß, Christoph Hörtnagl, David Laubenstein,  Josh Ramanowski,  Fabian Wenzel},
+	bookmarks=true,
+}
+%\author{Giorgio Groß, Christoph Hörtnagl, David Laubenstein,  Josh Ramanowski,  Fabian Wenzel}
 \title{Pflichtenheft: Crash- Cam}
+
+\usepackage[ngerman]{translator}
+%Paket laden
+\usepackage[
+nonumberlist, %keine Seitenzahlen anzeigen
+acronym,      %ein Abkürzungsverzeichnis erstellen
+toc,          %Einträge im Inhaltsverzeichnis
+section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
+{glossaries}
+
+%Befehle für Abkürzungen
+\newacronym{KIT}{KIT}{Karlsruher Institut für Technologie}
+
+% KIT layout
+\usepackage{color}
+
+\definecolor{orange}{rgb}{1,0.5,0}
+\definecolor{mintgreen}{RGB}{50,161,137}
+\definecolor{gray}{RGB}{120,120,120}
+
+\usepackage[color]{changebar}
+\cbcolor{gray}
+\changebarwidth 0.5pt
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+ \fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen 
+ 
+ \fancypagestyle{plain}{} %Kopf- und Fußzeile auf jeder Seite	 
+	\fancyhead[L]{Pflichtenheft}
+	\fancyhead[R]{\leftmark}
+	\rhead{\nouppercase{\leftmark}}
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\headrule}{\hbox to\headwidth{%
+		\color{mintgreen}\leaders\hrule height \headrulewidth\hfill}}
+
+
+
+	\renewcommand{\footrulewidth}{0.5pt}
+	\renewcommand{\footrule}{\hbox to\headwidth{%
+  		\color{mintgreen}\leaders\hrule height \headrulewidth\hfill}}				
+	\fancyfoot[LE,RO]{\thepage}
+
+
+
+\setcounter{tocdepth}{5}
+
 \begin{document}
-\maketitle
-\newpage
+\include{./subtopicsFuncspec/Deckblatt}
+% \maketitle
 \tableofcontents
 \newpage
 %content
