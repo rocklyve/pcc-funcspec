@@ -1,20 +1,21 @@
-\section{Globale Testf\"alle}
-\subsection{Erkl\"arung zu den Testsuites der Qualit\"atssicherung}
-Um eine m\"oglichst fl\"achendeckende Qualita\"atssicherung zu ermo\"oglichen, werden wir im Folgenden zwischen verschiedenen Arten von Testabla\"aufen unterscheiden. Diese sollen automatisierte Tests sein und das Backend und Frontend testen. Das Ziel ist, 80 Prozent des geschriebenen Codes ausf\"urhrlich zu testen. \\
+\chapter{Globale Testf\"alle}
+\section{Erkl\"arung zu den Testsuites der Qualit\"atssicherung}
+Um eine m\"oglichst fl\"achendeckende Qualita\"atssicherung zu ermo\"oglichen, werden wir im Folgenden zwischen verschiedenen Arten von Testabla\"aufen unterscheiden. Wir bieten automatisierte Tests, die das Backend und Frontend testen. Das Ziel ist, 80 Prozent des geschriebenen Codes ausf\"urhrlich zu testen. \\
+Zudem werden manuelle Tests durchgef\"uhrt, 
 Wir teilen die Testphase in mehrere Teilphasen ein, um Struktur in das Testen zu bekommen.
-\subsubsection{Komponententests}
+\subsection{Komponententests}
 Komponententests sind allgemein dazu da, um einzelne Komponenten der Software zu testen. In unserem Beispiel werden wir den Java-Server, die Android-App und das Webinterface auf deren Funktionalit\"at testen. 
-\subsubsection{Integration-Testsuite}
+\subsection{Integration-Testsuite}
 In der Integration-Testsuite wird die Kommunikation der Komponenten getestet.
-\subsubsection{Systemtests}
+\subsection{Systemtests}
 Die Software wird nun auf einer realen Umgebung installiert und mit Testdaten gef\"ullt. Dort wird die Software unter realen Bedingungen getestet.
 
-\subsection{Testzsenarien}
-\subsubsection{REST-Request des Webinterfaces}
+\section{Testzsenarien}
+\subsection{REST-Request des Webinterfaces}
 Der Kunde f\"uhrt auf der Anmeldeseite einen Log-In durch udn will nun seine gespeicherten Videos verwalten. Dabei wird ein REST-Request des Webinterface an den Server gesendet, dieser bearbeitet den Req\"ust und liefert als Response eine Antwort, die dann vom Webinterface dargestellt wird.
 
-\subsubsection{Speichere gerade aufgenommenen Unfall}
+\subsection{Speichere gerade aufgenommenen Unfall}
 Der G-Sensor des Ger\"ats l\"ost aus, da gerade ein Unfall geschehen ist. Nun wird das Video verschl\"usselt auf dem lokalen Speicherbereich abgelegt. Zudem wird es nun unter "noch nicht hochgeladene" Unf\"alle angezeigt. Die M\"oglichkeit zum hochladen, l\"oschen und umbenennen des Unfalls wird angezeigt und jede der M\"oglichkeiten funktioniert.
 
-\subsubsection{Anonymisierung des Videos auf dem Java-Server}
+\subsection{Anonymisierung des Videos auf dem Java-Server}
 Der Kunde hat einen Unfall aufgenommen und diesen lokal gespeichert. Nun bet\"atigt er die Funktion "Unfall hochladen". Das bereits lokal verschl\"usselte Video wird zum Server gesendet und dieser legt die Datei in das tempor\"ares Verzeichnis ab. Das Video wird anonymisiert und richtig auf dem Server abgelegt. Dem Usereintrag in der Datenbank wird um den Pfad zum neu abgespeicherten Video erg\"anzt, damit der Kunde das Video nun auch auf seiner App/Webinterface sehen kann.
