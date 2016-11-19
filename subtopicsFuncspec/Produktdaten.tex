@@ -1,29 +1,29 @@
 \chapter{Produktdaten}
-
+Zur Verwendung des Produktes werden vom jeweiligen Teil der Software Daten angefordert und somit auch abgelegt, die jedoch haupts\"achlich auf der Datenbank des Servers gespeichert sind.
 \section{App-Daten}
 \begin{description}
 \item[PD Kundendaten]\hfill \\
-Es werden Nachname, Vorname sowie die E-Mail Adresse des Kunden gespeichert.
+Es werden Nachname, Vorname sowie die E-Mail Adresse des Kunden abglegt.
 \item[PD Einstellungen]\hfill \\
-Es werden Einstellungen der Kamera, sprich die Auflösung der Aufnahme.
+Es werden Einstellungen der Kamera, sprich die Auflösung der Aufnahme gespeichert.
 \item[PD Ringpuffer]\hfill \\
 Es werden eine Minute an Video Material im Ringpuffer gespeichert.
 \item[PD Videodaten]\hfill \\
 Es werden Videodaten, sowie Ort und Zeit in die Meta-Daten des Videos gespeichert.
 \end{description}
 
-section{Web-Service}
+\section{Web-Service}
 \begin{description}
 \item[PD Videodaten]\hfill \\
 Es werden Temporär Videodaten, sowie Ort und Zeit in den Meta-Daten des Videos gespeichert.
+\item[PD Kundendaten]\hfill \\
+Es werden Nachname, Vorname sowie die E-Mail Adresse des Kunden in einer Datenbank gespeichert. Jeder Kunde bekommt eine einzigartige ID zugewiesen. 
 \end{description}
 
 \section{Webinterface Daten}
 \begin{description}
-\item[PD Kundendaten]\hfill \\
-Es werden Nachname, Vorname sowie die E-Mail Adresse des Kunden gespeichert. Jeder Kunde bekommt eine einzigartige ID zugewiesen.
-\item[PD Videodaten]\hfill \\
-Es werden anonymisierte Videodaten, sowie Ort und Zeit aus des Meta-Daten des Videos gespeichert. Das Tonsignal wird nicht gespeichert.
+\item[PD Daten]\hfill \\
+Es werden keine Daten auf dem Webinterface gespeichert. Alle Informationen werden mit REST-Anfragen vom Webservice abgerufen.
 \end{description}
 
 
