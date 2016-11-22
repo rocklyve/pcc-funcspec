@@ -7,3 +7,9 @@
 *.synctex.gz
 *.pdf
 *.cb*
+*.glg
+*.acn
+*.glo
+*.gls
+*.glsdefs
+*.ist
