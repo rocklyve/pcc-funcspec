@@ -1,0 +1,18 @@
+Zielbestimmung:
+	-	Tippen, um Zeuge zu werden?
+
+Produkteinsatz:
+	-	Anwendungsbereiche?
+
+Produktumgebung:
+	-	Webinterface: Betriebssystem mit Internetverbindung
+	-	Webinterface: Einschraenkungen? BrowserVersion (bzw alle Browser auflisten?), evtl Vaadin Version?
+
+	-	Webservice: reicht JAVA Version 8 oder genauer?
+	-	Webservice: reicht Debian 8?
+	-	Webservice: Datenbank(Mysql oder Postgres)?
+	-	Webservice: muss Server Einschraenkungen haben, wie zB Geschwindigkeit, etc?
+
+Globale Testfaelle:
+	-	Einzelnen Phasen werden noch erweitert, wenn wir genaueres wissen, also ueber Produktumgebung etc...
+	-	Reichen 3 Testbeschreibungen oder muessen da mehr/ alle hin?
