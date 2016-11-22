@@ -27,3 +27,65 @@ JOSH PART
 	-	Produktumgebung: android app noch minimale optimierte bildschirmgröße ? 
 	-	9.1 in Tabellenform für bessere lesbarkeit ? ^^                        
 	-	bei den FA sind 2 seitenumbrüche quer durch eine anforderung das werd ich am ende nochmal richten, Rechtschreibung machen wir dann am freitag ?
+
+
+
+
+
+
+
+Einleitung wünschenswert?
+Länger bei Zielbestimmung
+
+Wird ein Benutzerhandbuch erwartet? Also eigenes Kapitel „Bedienung“ und dort genaue Beschreibung?
+Mit Testfällen realisieren
+
+Welche Nutzerdaten werden lokal immer verfügbar sein?
+Mail + PW
+
+Werden die Daten synchronisiert? Oder immer beim LogIn vom Server geholt?
+Beim Hochladen
+
+Kann die App ohne Internetverbindung geöffnet werden? Also ohne LogIn beim start?
+Aufzeichnung ohne Internetverbindung
+
+Kann die App benutzt werden ohne sich zu registrieren? So dass Videos aufgezeichnet und verschlüsselt werden, aber so bald die Anonymisierung gebraucht wird muss ein Account erstellt werden?
+Registrieren beim ersten Appstart
+
+PW ändern Funktion?
+Ja
+
+App im Hoch oder Querformat?
+Hoch Pflicht, Quer Wunsch
+
+
+In Zielbestimmungen integrieren:
+Vaadin 
+Webdienst (z.B. Jetty, etc)
+Java 8
+Debian 8
+Postgress
+G-Sensor + Knopf 
+Videos können hochgeladen werden + Schnittstelle dafür
+
+Nur ein Smartphone pro Nutzeraccount
+
+Produktumgebung:
+Webservice -> Webdienst
+Serviereinschränkungen nicht festlegen…
+
+Globale Testfälle:
+Testfälle ~> Standardbenutzungen, wichtige Testfälle mit wichtigen Merkmalen, keine zu kleinen Details
+80% Codeabdeckung ändern? 
+Funktionale Tests / Unittests in Pflichtenheft erwähnen, Unitests für Komponenten, Integrationstest als manuelle Tests
+
+Zielsetzung:
+Joshs Änderungen übernehmen.
+Keine Altersbeschränkungen angeben
+Labels verwenden um Zielbestimmungen mit FAs zu verwenden
+Funktionale Wunschanforderungen nicht zwingend notwendig
+
+UI Demos
+In den Anhang  (evtl in die Testfälle zur Veranschaulichung?)
+
+WK So lange G-Sensor triggert weiter aufnehmen

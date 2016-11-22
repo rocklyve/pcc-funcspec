@@ -1,6 +1,8 @@
 \documentclass[a4paper,twoside,BCOR=20mm]{scrreprt}
 \usepackage[utf8]{inputenc}
-\usepackage[german]{babel}	% german hyphenation, quotes, etc
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}	% german hyphenation, quotes, etc
+\usepackage[ngerman]{translator}
 \usepackage{amsmath}
 \usepackage{paralist}
 \usepackage{amsfonts}
@@ -17,7 +19,6 @@
 }
 \title{Pflichtenheft: Crash- Cam}
 
-\usepackage[ngerman]{translator}
 %Paket laden
 \usepackage[
 nonumberlist, %keine Seitenzahlen anzeigen
@@ -28,6 +29,10 @@ section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
 
 %Befehle für Abkürzungen
 \newacronym{KIT}{KIT}{Karlsruher Institut für Technologie}
+
+%Richtige Silbentrennungen
+\hyphenation{Ein-stel-lun-gen}
+\hyphenation{Be-stä-ti-gungs-di-a-log}
 
 % KIT layout
 \usepackage{color}
@@ -58,7 +63,6 @@ section]      %im Inhaltsverzeichnis auf section-Ebene erscheinen
 	\renewcommand{\footrule}{\hbox to\headwidth{%
   		\color{mintgreen}\leaders\hrule height \headrulewidth\hfill}}				
 	\fancyfoot[LE,RO]{\thepage}
-
 
 
 \setcounter{tocdepth}{5}

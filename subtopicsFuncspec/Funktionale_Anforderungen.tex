@@ -1,70 +1,71 @@
 \chapter{Funktionale Anforderungen}
 
 \section{App}
-\begin{description}
-\item[FA Anzeigen der Einlog-Ansicht] \hfill \\
+\begin{enumerate}[\bfseries{FA}10]
+\setcounter{enumi}{99}
+\item \textbf{Anzeigen der Einlog-Ansicht} \hfill \\
 Öffnet der Benutzer die App, so gelangt er in die Einlog-Ansicht. Dort kann er sich einloggen. Das Erstellen von Benutzeraccounts ist hier \textbf{nicht} möglich.
 
-\item[FA Einloggen in die App] \hfill \\
+\item \textbf{Einloggen in die App} \hfill \\
 Zum Einloggen in die App müssen User-Name und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte User (siehe FAxx) können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten App-Sitzung ausloggen, bevor er sich einloggen kann. Bei falschen Eingaben oder wenn der Nutzer bereits eingeloggt ist kehrt er zur Einlog-Ansicht zurück und erhält eine Fehlermeldung.
 
-\item[FA Ausloggen von einem Benutzeraccount] \hfill \\
+\item \textbf{Ausloggen von einem Benutzeraccount} \hfill \\
 Klickt ein Benutzer im Menü auf "'ausloggen"', so wird er auf die Einlog-Ansicht zurückgeleitet. Schließt ein Nutzer die App, so wird er automatisch ausgeloggt.
 
-\item[FA Anzeigen der Vorschau im Beobachtungsmodus] \hfill \\
+\item \textbf{Anzeigen der Vorschau im Beobachtungsmodus} \hfill \\
 Hat ein Benutzer die App gestartet, so gelangt er in den Beobachtungsmodus. Dort wird ihm ein Preview von dem Ausschnitt angezeigt, den die Kamera aufnimmt wenn die Beobachtung gestartet wird. In dem Beobachtungsmpdus befinden sich zudem ein "'Kamerabutton"' zum starten/stoppen der Beobachtung (FAxx und FAxx).
 
-\item[FA Starten der Beobachtung] \hfill \\
+\item \textbf{Starten der Beobachtung} \hfill \\
 Ist die App im Beobachtungsmodus, so startet die App die Beobachtung automatisch. Nun wird der Ringpuffer beschrieben (FAxx). Dies wird dem Benutzer durch ein animiertes Symbol im unteren linken Bilderschirmrand visualisiert. Zudem ist nun der "'Crash-Button"' verfügbar über man manuell die Persistierung des Videos (FAxx) auslösen kann.
 
-\item[FA Stoppen der Beobachtung] \hfill \\
+\item \textbf{Stoppen der Beobachtung} \hfill \\
 Wenn der Benutzer die Beobachtungsansicht während der Beobachtung verlässt, oder die App schließt, wird die Beobachtung automatisch beendet.
 
-\item[FA Beschreiben des Ringpuffers] \hfill \\
+\item \textbf{Beschreiben des Ringpuffers} \hfill \\
 Wurde die Beobachtung gestartet so wird der Ringpuffer mit dem aufgenommenen Bildmaterial beschrieben. Ist der Puffer voll, so wird stets zuerst aufgenommenes Material auch zuerst überschrieben. Der Ringpuffer ist für den Benutzer nicht zugänglich. Das Bildmaterial auf dem Puffer ist noch nicht verschlüsselt.
 
-\item[FA Auslösen des G-Sensors] \hfill \\
+\item \textbf{Auslösen des G-Sensors} \hfill \\
 Werden die in NAxx bis NAxx definierten Richtwerte des G-Sensors überschritten, so wird die Persistierung des Videos iniziiert. Als Auslöser der Persistierung wird das Auslösen durch G-Sensor, sowie die Messwerte des G-Sensors zu dem Zeitpunkt den Metadaten des Videos beim Speichern hinzugefügt.
 
-\item[FA Auslösen der manuellen Aufnahmefunktion] \hfill \\
+\item \textbf{Auslösen der manuellen Aufnahmefunktion} \hfill \\
 Drückt der Benutzer den "'Crash-Button"' so wird die Persistierung des Videos iniziiert. Als Auslöser der Persistierung wird das manuelle Auslösen den Metadaten des Videos beim Speichern hinzugefügt.
 
-\item[FA Persistieren eines Videos] \hfill \\
+\item \textbf{Persistieren eines Videos} \hfill \\
 Wurde eine Persistierung ausgelöst so speichert die App den Inhalt des Ringpuffers, sowie die folgende von der Kamera aufgenommene Minute in ein Video. Während der Persistierung wird nicht weiter Beobachtet. Vor dem Speichern des Videos werden relevante Metadaten (Ort der Aufnahme, Zeit der Aufnahme, Grund der Aufnahme) eingefügt. Die Tonspur des Videos wird verworfen. Beim Speichern des Videos verschlüsselt die App das Video (FAxx). Ist die App mit der Persistierung fertig, wird die Beobachtung automatisch fortgesetzt.
 
-\item[FA Verschlüsseln eines Videos] \hfill \\
+\item \textbf{Verschlüsseln eines Videos} \hfill \\
 Vor dem Speichern eines Videos durch die App wird das Video verschlüsselt. Hierbei wird das unter Kaptiel X.Y defininierte Verschlüsselungsverfahren angewandt.
 
-\item[FA Anzeigen des Menüs] \hfill \\
+\item \textbf{Anzeigen des Menüs} \hfill \\
 Drückt der Benutzer den "'Menü-Button"' in der oberen linken Ecke des Bildschirms, so öffnet sich das Menü. Beobachtet das Handy, wenn das Menü geöffnet wird, wird die Aufnahme nicht gestoppt. In dem Menü hat der Benutzer die Möglichkeit in den Beobachtungsmodus zu gehen (FAxx), die gespeicherten Videos anzuzeigen (FAxx), die Einstellungen anzuzeigen (FAxx), die Datenschutzerklärung anzuzeigen (FAxx) oder sich auszuloggen (FAxx).
 
-\item[FA Anzeigen der Liste der persistierten Videos] \hfill \\
+\item \textbf{Anzeigen der Liste der persistierten Videos} \hfill \\
 Wählt der Benutzer im Menü die Option "'Meine Videos"', so gelangt zu einer Ansicht, in dem ihm seine persistierten Videos chronologisch aufgelistet werden. Der Nutzer kann Videos hochladen (FAxx), löschen (FAxx), oder Videoinformationen einsehen (FAxx).
 
-\item[FA Hochladen von gespeicherten Videos] \hfill \\
+\item \textbf{Hochladen von gespeicherten Videos} \hfill \\
 Klickt der Nutzer auf den "'Upload-Button"', wird ein Dialog aufgerufen, in dem der Nutzer darauf hingewiesen wird, dass mobile Daten anfallen werden. Wenn der Benutzer akzeptiert, schickt die App eine Anfrage an den Server. Dieser beantwortet die Anfrage falls Ressourcen verfügbar sind und erlaubt den Upload. In jedem Fall wird dem Nutzer ein Erfolgs- bzw. Misserfolgsdialog gezeigt. Von diesem aus kann er zu der Liste seiner Videos zurückkehren.
 
-\item[FA Löschen von gespeicherten Videos] \hfill \\
+\item \textbf{Löschen von gespeicherten Videos} \hfill \\
 Klickt der Benutzer auf das "'Löschen-Symbol"', so wird ein Bestätigungsdialog geöffnet. Falls der Benutzer bestätigt wird das Video aus der Liste seiner persistierten Videos entfernt und vom Gerät gelöscht. Bricht der Benutzer den Dialog ab bleibt er in der Listenansicht seiner Videos.
 
-\item[FA Anzeigen einer Benachrichtigung zum Löschen von Videos] \hfill \\
+\item \textbf{Anzeigen einer Benachrichtigung zum Löschen von Videos} \hfill \\
 Beim einloggen in die App wird geprüft, ob ein Nutzer auf seinem Gerät persistierte Videos seit über 4 Wochen gespeichert hat. Ist dies so wird ihm ein Dialog angezeigt, der ihn auf diesen Umstand hinweist. Dort wird ihm angeboten, das Video zu löschen (FAxx). Bricht er den Dialog ab, gelangt er wie üblich in den Beobachtungsmodus.
 
-\item[FA Einsehen von Video-Daten der anonymisierten Videos] \hfill \\
+\item \textbf{Einsehen von Video-Daten der anonymisierten Videos} \hfill \\
 Klickt der Benutzer das "'Info-Symbol"' wird ein Fenster geöffnet, dass dem Benutzer die Video-Metadaten (Erstellungsdatum, Datum der Anonymisierung, Größe, Auflösung, Dauer) anzeigt. Schließt der Nutzer das Fenster, kehrt er zu der Liste seiner Videos zurück.
 
-\item[FA Anzeigen der Einstellungen]
-Wählt der Benutzer im Menü die Option "'Einstellungen"', so werden dem Nutzer die Standardeinstellungen angezeigt (Auflösung, Bildwiederholrate, Größe Ringpuffer etc.) angezeigt.
+\item \textbf{Anzeigen der Einstellungen}
+Wählt der Benutzer im Menü die Option ``Einstellungen'', so werden dem Nutzer die Standardeinstellungen angezeigt (Auflösung, Bildwiederholrate, Größe Ringpuffer etc.) angezeigt.
 
-\item[FA Anzeigen der Datenschutzerklärung] \hfill \\
+\item \textbf{Anzeigen der Datenschutzerklärung} \hfill \\
 Wählt der Benutzer im Menü die Option "'Datenschutz"', so wird eine Sicht geöffnet, in der der Nutzer die Datenschutzerklärung und die AGB einsehen kann.
 
-\item[FA Anzeigen des Impressums] \hfill \\
+\item \textbf{Anzeigen des Impressums} \hfill \\
 Wählt der Benutzer im Menü die Option "'Impressum"', so wird eine Sicht geöffnet, in der der Nutzer das Impressum einsehen kann.
 
-\end{description}
+\end{enumerate}
 
-\section{Web-Service}
+\section{Web-Dienst}
 \begin{description}
 \item[FA Empfangen eines Videos von der App] \hfill \\
 Bekommt der Web-Service eine Anfrage von der App ein Video hochzuladen, so überprüft er zunächst, ob er die Anfrage bearbeiten kann, oder ob bereits zu viele andere Anfragen gestellt wurden (NAxx). Ist dies nicht der Fall, so speichert er das Video temporär und beginnt die Anonymisierung (FAxx-FAxx).
