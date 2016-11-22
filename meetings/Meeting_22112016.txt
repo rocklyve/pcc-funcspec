@@ -16,3 +16,14 @@ Produktumgebung:
 Globale Testfaelle:
 	-	Einzelnen Phasen werden noch erweitert, wenn wir genaueres wissen, also ueber Produktumgebung etc...
 	-	Reichen 3 Testbeschreibungen oder muessen da mehr/ alle hin?
+JOSH PART
+
+	-	wie weit sollen wir wunschkriterien ausführen                        
+		*zielgruppe:
+	-	ist es unser ziel dash cams zu ersetzen ? versuchen wir sie nicht eig nur datenschutzrechtlich durchzubringen,
+	-	dementsprechend auch "rechtskonform" in etwas der form "in Einklang mit dem deutschen Datenschutzrecht" ändern?
+	-	daher generell so das zentrale ziel "Eine praktische, einfach zu bedienende und legale Möglichkeit Unfallhergänge aufzunehmen und damit Unfälle schnell und präzise aufzuklären" (?)
+	-	alter iwie auf 70 einzuschränken ist vlt bissle weit gegriffen ich kenn n paar in dem alter die das auch nutzen würden :p würd vlt eher sagen altersklasse 18+ und hauptzielgruppe 18-60 oder so :p
+	-	Produktumgebung: android app noch minimale optimierte bildschirmgröße ? 
+	-	9.1 in Tabellenform für bessere lesbarkeit ? ^^                        
+	-	bei den FA sind 2 seitenumbrüche quer durch eine anforderung das werd ich am ende nochmal richten, Rechtschreibung machen wir dann am freitag ?
