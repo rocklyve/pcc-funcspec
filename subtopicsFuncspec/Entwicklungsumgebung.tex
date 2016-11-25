@@ -1,13 +1,64 @@
 \chapter{Entwicklungsumgebung}
+
+\section{verwendete Technologien}
+
+\begin{flushleft}
+\begin{tabularx} {\textwidth}{|X|X|} \hline
+\rowcolor[HTML]{C0C0C0} \textbf{Anwendung} & \textbf{verwendete Technologie} \\ \hline
+Programmiersprache (App, Web-Service und Web-Interface) & Java 8 \\ \hline
+Web-Framework & Vaadin 7 \\ \hline
+Android IDE & Andoid Studio \\ \hline
+Java IDE & IntelliJ IDEA \\ \hline
+Java Servlet und Http Server & Jetty 9.3.14 \\ \hline
+Serverkommunikation & RESTful \\ \hline
+RESTful-Framework & Jersey 2.24.1 \\ \hline
+Datenbank & PostgreSQL \\ \hline
+Projektmanagement & Atlassian JIRA \\ \hline
+Textverarbeitung & LaTeX \\ \hline
+TeX-Distribution & TexLive \\ \hline
+LaTeX Editor & TexMaker \\ \hline
+UML Tool & Umlet \\ \hline
+Versionskontrolle & Git \\ \hline
+\end{tabularx}
+\end{flushleft}
+
 \section{Beschreibung}
-Die Programmiersprache, mit der wir unser Projekt realisieren ist Java. Wir verwenden f\"ur das Web-Interface das Java Web UI Framework Vaddin, welche eine serverseitige Architektur anbietet. Vaddin benutzt das Google Web Toolkit zur Darstellung von Webseiten, mit der wir unsere Website erstellen. \newline 
-Eclipse oder Intelij, beides integrierte Entwicklungsumgebungen, werden für die Implementierung genutzt. \newline 
-Für die Android Applikation verwenden wir die frei integrierte Entwicklungsumgebung Android Studio, welche sich auf die Intelij IDEA stützt.\newline
-F\"ur das Web-Interface nutzen wir einen Webservice namens "XXX", welcher es uns erm\"oglicht, REST-Anfragen zu bearbeiten. \linebreak
-Zur Aufgabenverteilung verwenden wir das von Atlassian entwickelte Projektmanagement-Tool JIRA. Dies wird zur Aufgabenverteilung und Dokumentation unserer Arbeit benutzt. 
-Um eine Versionskontrolle aller Dokumente zu ermöglichen benutzen wir GIT um nicht-lineare Entwicklung durchzuführen. 
-Der Web-Service GitHub ermöglicht uns unsere Repositories privat zu verwalten. \newline
-Zum erstellen des Pflichtenhefts und allen anderen Dokumenten verwenden wir die TeX-Distribution TexLive in Kombination mit dem grafischen Editor TexMaker, welcher uns den Latex Code kompiliert und in PDF-Form ausgibt.
-\linebreak
-Zur Erstellung von UML-Diagrammen wurde das freie unabhängige UML-Werkzeug UMLet verwendet.  Mit diesem wurden Anwendungs- und Aktivitätsdiagramme erstellt, um bestimmte Bedienungen und Abläufe zu veranschaulichen. \gls{Test}
-\section{Zusammenfassung}
+
+\begin{description}
+\item \textbf{Java} \hfill \\
+Da alle verwendeten Technologien auf Java basieren, verwenden wir für alle Module (App, Web-Service und Web-Interface) Java.
+
+\item \textbf{Vaadin} \hfill \\
+Für die Realisierung des Web-Interface wird Vaadin verwendet. Vaadin ermöglicht die Weboberfläche vollständig in Java zu schreiben und bietet moderne responsive Layouts an.
+
+\item \textbf{Android Studio} \hfill \\
+Für die Implementierung der Android App wird die offizielle Android-Entwicklungsumgebung Android Studio von Google verwendet.
+
+\item \textbf{IntelliJ IDEA} \hfill \\
+IntelliJ IDEA ist eine Java Entwicklungsumgebung, die zusätzlich zu dem üblichen Umfang anderer gängiger IDEs Support für die Entwicklung mit Vaadin, Jetty und Jersey anbietet.
+
+\item \textbf{Jetty} \hfill \\
+Für den Web-Service und das Web-Interface läuft auf dem Server Jetty. Jetty bietet eine Kombination aus Java Servlet und Http Server.
+
+\item \textbf{RESTful} \hfill \\
+Um Anfragen zwischen den einzelnen Modulen zu vereinheitlichen verwenden wir die Kommunikationsschnittstelle RESTful.
+
+\item \textbf{Jersey} \hfill \\
+Für die Umsetzung von RESTful in Java wird das Framework Jersey verwendet.
+
+\item \textbf{PostgreSQL} \hfill \\
+Zur Verfaltung der Nutzerdaten und der hochgeladen Videos wird das Datenbanksystem PostgreSQL eingesetzt.
+
+\item \textbf{Atlassian JIRA} \hfill \\
+Atlassian JIRA bietet eine Webanwendung zur Projektverwaltung. Dort werden Aufgaben erfasst, verwaltet und dokumentiert.
+
+\item \textbf{LaTeX} \hfill \\
+Um eine einfache, einheitliche und stabile Formattierung zu gewährleisten wird zur Texterstellung LaTeX  anstelle klassischer Texteditoren wie Word verwendet. Umgesetzt wird dies durch die Tex-Distribution TexLive und den Editor TexMaker.
+
+\item \textbf{Umlet} \hfill \\
+Zum einfachen Entwerfen von UML-Diagrammen wird das Tool Umlet verwendet.
+
+\item \textbf{Git} \hfill \\
+Git bietet eine ein teamfähiges (nicht-lineares) Versionskontrollsystem an, über das alle Daten des Projekts erfasst werden.
+
+\end{description}
