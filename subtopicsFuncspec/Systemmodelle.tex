@@ -7,13 +7,13 @@
 Dieser Anwendungsfall beschreibt die Bedienung der App. 
 Der Benutzer kann hierbei mehrere Aktionen ausführen:
 \begin{itemize}
+\itemsep0pt
 \item Login durchführen
 \item Videos verwalten
 \item Manuelle Speicherung beginnen
 \end{itemize}
-Um auf alle Funktionen zugreifen zu können muss sich der Benutzer zunächst auf der App einloggen. 
-Wenn der Benutzer sein aufgenommenes Videomaterial verwalten will kann er zum einen die Videos auf den Web-Service hochladen oder die Videos löschen.
-Außerdem kann man einen manuellen Speichervorgang ohne des Auslösen des Sensors beginnen um zum Beispiel.
+Um die App zu nutzen, muss sich der Benutzer zunächst auf der App einloggen. Nach dem Einloggen kann der Benutzer sein aufgenommenes Videomaterial verwalten. Er kann z.B. Videos löschen, oder auf den Webservice hochladen.
+Ist er in der Beobachtungsansicht, so ist es dem Nutzer möglich die Manuelle Speicherung des Videomaterials zu iniziieren.
 
 \subsection{Bedienung der Website}
 \begin{center}
@@ -22,15 +22,14 @@ Außerdem kann man einen manuellen Speichervorgang ohne des Auslösen des Sensor
 Dieser Anwendungsfall beschreibt die Bedienung der Website.
 Der Benutzer kann hierbei mehrere Aktionen ausführen:
 \begin{itemize}
+\itemsep0pt
 \item Login durchführen
 \item Registrieren
 \item Benutzerdaten ändern
-\item Videodaten runterladen
+\item Verifizierung an Benutzer
 \end{itemize}
-Um den Service der App und der Website zu nutzen muss sich der Benutzer zu Beginn mit seinen Benutzerdaten registrieren. 
-Nun kann er den Login auf der Website oder App durchführen um die Funktionen beider Applikationen zu nutzen. 
-Ist der Benutzer eingeloggt kann er seine Benutzerdaten ändern und bereits hochgeladene Videodaten nach der Anonymisierung runterladen.
-Nach der Registrierung und Änderung von Benutzerdaten schickt der Web-Service eine Verifizierungs-E-Mail an den Benutzer.
+Um die Website zu nutzen, muss sich der Benutzer zunächst registrieren. Nach der Registrierung und Änderung von Benutzerdaten schickt der Web-Service eine Verifizierungs-E-Mail an den Benutzer. Nach der Bestätigung kann sich er sich auf der Webseite anmelden um deren Funktion zu nutzen. Ist der Benutzer eingeloggt, kann er seine Benutzerdaten ändern und zuvor hochgeladene, nun anonymisierte Videodaten herunterladen.
+
 \section{Aktivitätsdiagramm}
 \subsection{Von Appstart bis Videofreigabe}
 \begin{center}
@@ -38,43 +37,44 @@ Nach der Registrierung und Änderung von Benutzerdaten schickt der Web-Service e
 \end{center}
 Dieses Aktivitätsdiagramm beschreibt den Ablauf vom Start der App bis zur Freigabe und dem Runterladen der Videodaten. 
 \begin{enumerate}
-\item Öffnen der Applikation
-\item Einloggen in die Applikation
+\itemsep0pt
+\item Öffnen der App
+\item Einloggen in die App
 \begin{description}
-\item Der Benutzer loggt sich mit seinen Anmeldedaten in die Applikation ein um die Funktionen zu nutzen.
+\item Der Benutzer loggt sich mit seinen Anmeldedaten in die App ein um die Funktionen zu nutzen.
 \end{description}
 \item Speicherung beginnen
 \begin{enumerate}
 \item Auslösen des G-Senors
 \begin{description}
-\item Der G-Sensor löst aus da er einen bestimmten Richtwert überschritten hat und somit beginnt die Speicherung der Videodaten. 
+\item Der G-Sensor löst aus da er den festgelegten Richtwert überschritten hat.
 \end{description}
 \item Manuelle Speicherung aktivieren
 \begin{description}
-\item Der Benutzer hat eine manuelle Speicherung angefordert und die Daten werden persistiert.
+\item Der Benutzer fordert manuell die Speicherung an.
 \end{description}
 \end{enumerate}
 \item Speichern und verschlüsseln der Videodaten
 \begin{description}
-\item Bei Beendigung der Aufnahme wird die Videodaten gespeichert und daraufhin mit einer Verschlüsselung versehen.
+\item Nach Beendigung der Aufnahme werden die Videodaten verschlüsselt und daraufhin auf dem Smartphone gespeichert.
 \end{description}
 \item Videodaten auswählen
 \item Videodaten hochladen
 \begin{description}
-\item Die ausgewählte Videodaten wird auf den Web-Service hochgeladen.
+\item Die ausgewählten Videodaten wird auf den Web-Service hochgeladen.
 \end{description}
 \item Videodaten entschlüsseln
 \item Videodaten anonymisieren
 \begin{description}
-\item Nach der Entschlüsselung der Videodaten kann der Web-Service mit der Anonymisierung der Daten beginnen. 
+\item Nach der Entschlüsselung der Videodaten, anonymisiert der Web-Dienst diese.
 \end{description}
 \item Videodaten speichern
 \item Videodaten freigeben
 \begin{description}
-\item Die Videodaten werden auf der Web-Interface zugänglich gemacht.
+\item Die Videodaten werden dem Benutzer auf der Web-Interface zugänglich gemacht.
 \end{description}
-\item Videodaten runterladen
+\item Videodaten herunterladen
 \begin{description}
-\item Nun kann der Benutzer sich einloggen und die Videodaten herunterladen.
+\item Nun kann der Benutzer sich einloggen und die anonymisierten Videodaten herunterladen.
 \end{description}
 \end{enumerate}
