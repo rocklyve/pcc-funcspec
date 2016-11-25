@@ -2,18 +2,21 @@
 
 \includegraphics[width=\textwidth]{subtopicsFuncspec/Res//Mockups/Portrait_camera_view_car.jpg}\\[0.5cm]
 
-Das Produkt ermöglicht es seinen Nutzern ihre Autofahrten zu überwachen, indem es durch die Handykamera den Straßenverkehr verfolgt und relevantes Videomaterial persistent abspeichert. Dieses wird bei Bedarf verwendet um einen Unfallhergang im Straßenverkehr zu dokumentieren. Dabei gilt es, dem deutschen Datenschutzrecht gerecht zu werden, indem Personen und personenbezogene Daten, wie zum Beispiel Autokennzeichen, unkenntlich gemacht werden.\newline
-Zur Realisierung kann das Produkt in drei Hauptbestandteile aufgegliedert werden: Die Android App, den Webdienst und das Web-Interface. Diese Aufteilung wird in diesem Heft um Übersicht zu schaffen auch in nachfolgenden Kapiteln beibehalten und soll dem Nutzer eine moderne und intuitive Bedienoberfläche bieten.
+Das Produkt ermöglicht es seinen Nutzern ihre Autofahrten zu überwachen, indem es durch die Handykamera den Straßenverkehr verfolgt und relevantes Videomaterial persistent abspeichert. Dieses wird bei Bedarf verwendet, um Unfallhergänge im Straßenverkehr zu dokumentieren. Dabei gilt es, dem deutschen Datenschutzrecht gerecht zu werden, indem Personen und personenbezogene Daten, wie zum Beispiel Autokennzeichen, unkenntlich gemacht werden. Die Anwendung bietet dem Nutzer dafür eine moderne und intuitive Bedienoberfläche.\newline
+Zur Realisierung kann das Produkt in drei Hauptbestandteile aufgegliedert werden: Die Android App, den Web-Dienst und das Web-Interface. Diese Aufteilung wird in diesem Heft um Übersicht zu schaffen auch in nachfolgenden Kapiteln beibehalten.
 
 \section{Musskriterien}
 \subsection{App}
-	\begin{enumerate}[\bfseries{PK}10]
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\textbf{\theenumi}}
+	\renewcommand{\theenumi}{PK\arabic{enumi}0}
 	\setcounter{enumi}{99}
-	\item Nutzer müssen sich einloggen um den Webdienst zu verwenden
+	\item Nutzer müssen sich einloggen um die App zu verwenden
 	\item Nur registrierte Nutzer können die App verwenden
 	\item Der Straßenverkehr wird durch die Handykamera beobachtet 
 	\item Relevante Videodaten werden verschlüsselt abgespeichert
 	\item Relevante Daten werden durch Auswertung der Sensordaten des Smartphones erkannt. Hierbei werden die Werte des G-Sensors ausgewertet
+	\item Während der Aufnahme werden sämtliche Nutzereingaben und Sensordaten ignoriert
 	\item Videodaten speichern relevante Metadaten
 	\item Es wird ab dem Appstart mit dem Beobachten des Straßenverkehrs begonnen
 	\item Es wird nur das Hochformat unterstützt
@@ -29,7 +32,9 @@ Zur Realisierung kann das Produkt in drei Hauptbestandteile aufgegliedert werden
 	\item Die Standardsprache ist Deutsch
 	\end{enumerate}
 \subsection{Web-Dienst}
-	\begin{enumerate}[\bfseries{PK}10]
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\textbf{\theenumi}}
+	\renewcommand{\theenumi}{PK\arabic{enumi}0}
 	\setcounter{enumi}{199}
 	\item Es existiert eine Schnittstelle, um Videodaten hochzuladen
 	\item Von der App gesendete Videodaten werden anonymisiert
@@ -45,7 +50,9 @@ Zur Realisierung kann das Produkt in drei Hauptbestandteile aufgegliedert werden
 	\item Es wird Jetty verwendet
 	\end{enumerate}
 \subsection{Web-Interface}
-	\begin{enumerate}[\bfseries{PK}10]
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\textbf{\theenumi}}
+	\renewcommand{\theenumi}{PK\arabic{enumi}0}
 	\setcounter{enumi}{299}
 	\item Es können Nutzeraccounts angelegt werden
 	\item Es können Nutzeraccounts verwaltet werden
@@ -56,8 +63,10 @@ Zur Realisierung kann das Produkt in drei Hauptbestandteile aufgegliedert werden
 	\end{enumerate}
 
 \section{Wunschkriterien}
-\subsection{APP}
-	\begin{enumerate}[\bfseries{WK}10]
+\subsection{App}
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\textbf{\theenumi}}
+	\renewcommand{\theenumi}{WK\arabic{enumi}0}
 	\setcounter{enumi}{99}
 	\item Falls es Android zulässt wird die Beobachtung auch ausgeführt, wenn sich die App im Hintergrund befindet
 	\item Sowohl Quer- als auch Hochformat werden unterstützt
@@ -75,9 +84,12 @@ Zur Realisierung kann das Produkt in drei Hauptbestandteile aufgegliedert werden
 	\item Anonymisierte Videodateien die sich auf dem Smartphone befinden können angesehen werden
 	\item Die aufnahmespezifischen Einstellungen können bearbeitet werden
 	\item So lange die Sensoren des Smartphones anlass zur Aufnahme geben wird weiter aufgenommen
+	\item Während der Aufnahme wird eine Möglichkeit angeboten die Aufnahme abzubrechen
 	\end{enumerate}
 \subsection{Web-Service}
-	\begin{enumerate}[\bfseries{WK}10]
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\textbf{\theenumi}}
+	\renewcommand{\theenumi}{WK\arabic{enumi}0}
 	\setcounter{enumi}{199}
 	\item Die Zeit, die die Anonymisierung in Anspruch nehmen wird, wird geschätzt und and den Nutzer weitergeleitet
 	\item Es wird eine Push-Benachrichtigung an das Smartphone gesendet, sobald die Anonymisierung der Videodaten abgeschlossen ist
@@ -85,13 +97,17 @@ Zur Realisierung kann das Produkt in drei Hauptbestandteile aufgegliedert werden
 	\item Der Nutzer erhält eine Woche vor bevor ein Video glöscht wird eine E-Mail-Banchrichtigung
 	\end{enumerate}
 \subsection{Web-Interface}
-	\begin{enumerate}[\bfseries{WK}10]
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\textbf{\theenumi}}
+	\renewcommand{\theenumi}{WK\arabic{enumi}0}
 	\setcounter{enumi}{299}
 	\item Das Produkt wird neuen Nutzern präsentiert
 	\end{enumerate}
 
 \section{Abgrenzungskriterien}
-	\begin{enumerate}[\bfseries{AK}1010]
+	\begin{enumerate}
+	\renewcommand{\labelenumi}{\textbf{\theenumi}}
+	\renewcommand{\theenumi}{AK\arabic{enumi}0}
 	\item Das betrachten nicht anonymisierter Videodaten ist nicht möglich
 	\item Videodaten werden nicht automatisch persistiert sobald die Beobachtung läuft
 	\item Livestreams werden nicht unterstützt

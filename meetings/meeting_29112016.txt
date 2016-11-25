@@ -1,0 +1,2 @@
+- OpenCV Technologie & Schnittstelle beschreiben in FA? Musskriterein? Produktumgebung?
+- Vaadin, Jersey, Jetty, RSA in Entwicklungsumgebung?
