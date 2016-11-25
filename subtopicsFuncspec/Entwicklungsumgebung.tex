@@ -51,7 +51,7 @@ Zum einfachen Entwerfen von UML-Diagrammen wird das Tool Umlet verwendet.
 Git bietet eine ein teamfähiges (nicht-lineares) Versionskontrollsystem an, über das alle Daten des Projekts erfasst werden.
 
 \item \textbf{Java} \hfill \\
-Da alle verwendeten Technologien auf Java basieren, verwenden wir für alle Module (App, Web-Service und Web-Interface) Java.
+Da alle verwendeten Technologien auf Java basieren, verwenden wir für alle Module (App, Web-Dienst und Web-Interface) Java.
 
 \item \textbf{Vaadin} \hfill \\
 Für die Realisierung des Web-Interface wird Vaadin verwendet. Vaadin ermöglicht die Weboberfläche vollständig in Java zu schreiben und bietet moderne responsive Layouts an.
@@ -75,6 +75,6 @@ Zur Erkennung der zu anonymisierenden Bildbereiche, sowie zur Anwendung der Anon
 
 \section{Verschlüsselung}
 
-Um den Datenschutz zu gewährleisten, ist es eine zentrale Funktion der App und des Web-Services, dass Videos vor der Anonymisierung ausschließlich verschlüsselt gespeichert werden. Hierbei wendet die App beim Persistieren eine hybride Verschlüsselung an. Dadurch verbindet hybdride Verschlüsselung die Geschwindigkeit von symmetrischer Verschlüsselung mit der Sicherheit asymetrsicher Verschlüsselung.\\
-Zunächst wählt die App einen zufälligen symmetrischen Schlüssel. Mit diesem Schlüssel wird das Video symmetrisch verschlüsselt. Anschließend wird der Schlüssel asymmetrisch mit dem öffentlichen Schlüssel des Web-Services verschlüsselt. \\
-Als Verschlüsselungsverfahren wird hierbei RSA verwendet.
+Um den Datenschutz zu gewährleisten, ist es eine zentrale Funktion der App und des Web-Dienst, dass Videos vor der Anonymisierung ausschließlich verschlüsselt gespeichert werden. Hierbei wendet die App beim Persistieren eine hybride Verschlüsselung an. Dadurch verbindet hybdride Verschlüsselung die Geschwindigkeit von symmetrischer Verschlüsselung mit der Sicherheit asymetrsicher Verschlüsselung.\\
+Zunächst wählt die App einen zufälligen symmetrischen Schlüssel. Mit diesem Schlüssel wird das Video symmetrisch verschlüsselt. Anschließend wird der Schlüssel asymmetrisch mit dem öffentlichen Schlüssel des Web-Dienst verschlüsselt. \\
+Als kryptographisches Verfahren werden hierbei AES für die symmetrische und RSA für die asymetrische Verschlüsselung verwendet.
