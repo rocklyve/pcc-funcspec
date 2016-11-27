@@ -12,7 +12,7 @@
 Anmeldedaten bestehen aus der E-Mai-Adresse und dem Passwort des Nutzers. Anemeldedaten werden lokal auf dem Gerät abgespeichert.
 
 \item \textbf{Einloggen in die App} \hfill \\
-Beim Appstart muss sich der Nutzer zunächst einloggen. Zum Einloggen in die App müssen die Anmeldedaten~\eqref{fa:Anmeldedaten} des Nutzers korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte Nutzer (vgl. FAxx) können sich einloggen. Beim Einloggen werden Nutzername und Passwort durch eine Serveranfrage geprüft. Bei falschen Eingaben oder wenn der Nutzer seinen Account nicht verifiziert hat erhält der Nutzer eine Fehlermeldung. Hat sich ein Nutzer bereits zuvor angemeldet, ohne sich wieder abzumelden, gelangt der Nutzer direkt zur Kamera-Ansicht. Die überprüfung der gespeicherten Anmeldedaten~\eqref{fa:Anmeldedaten} erfolgt dann erst beim Hochladen verschlüsselter Videodaten auf den Server~\eqref{fa:vidHochladen}.
+Beim Appstart muss sich der Nutzer zunächst einloggen. Zum Einloggen in die App müssen die Anmeldedaten~\eqref{fa:Anmeldedaten} des Nutzers korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte Nutzer ~\eqref{fa:erstellAcc}) können sich einloggen. Beim Einloggen werden Nutzername und Passwort durch eine Serveranfrage geprüft. Bei falschen Eingaben oder wenn der Nutzer seinen Account nicht verifiziert hat erhält der Nutzer eine Fehlermeldung. Hat sich ein Nutzer bereits zuvor angemeldet, ohne sich wieder abzumelden, gelangt der Nutzer direkt zur Kamera-Ansicht. Die überprüfung der gespeicherten Anmeldedaten~\eqref{fa:Anmeldedaten} erfolgt dann erst beim Hochladen verschlüsselter Videodaten auf den Server~\eqref{fa:vidHochladen}.
 
 \item \label{fa:logOut}\textbf{Ausloggen von einem Benutzeraccount} \hfill \\
 Klickt ein Benutzer im Menü auf ``ausloggen'', so wird er auf die Einlog-Ansicht zurückgeleitet und seine Anemldedaten~\eqref{fa:Anmeldedaten} vom Gerät gelöscht.
@@ -31,7 +31,7 @@ Wird die Kamera-Ansicht gestartet, befindet sich die Kamera sofort im Beobachtun
 Wenn der Benutzer die Kamera-Ansicht während der Beobachtung verlässt, oder die App schließt, wird die Beobachtung automatisch beendet.
 
 \item \label{fa:automUebergang}\textbf{Durch G-Sensor ausgelöster Übergang in den Aufnahmemodus} \hfill \\
-Werden die in NAxx bis NAxx definierten Richtwerte des G-Sensors überschritten, während die App die Kamera-Ansicht anzeigt, geht die Kamera in den Aufnahmemodus über~\eqref{fa:Aufnahmemodus}. 
+Werden die in ~\eqref{na:GSensfront} bis ~\eqref{na:GSensvert} definierten Richtwerte des G-Sensors überschritten, während die App die Kamera-Ansicht anzeigt, geht die Kamera in den Aufnahmemodus über~\eqref{fa:Aufnahmemodus}. 
 
 \item \label{fa:manUebergang}\textbf{Manueller Übergang in den Aufnahmemodus} \hfill \\
 Befindet sich die Kamera im Beobachtungsmodus~\eqref{fa:Beobachtungsmodus} geht sie nach doppeltem Tippen auf die Vorschaufläche der Kamera-Ansicht in den Aufnahmemodus über.
@@ -79,58 +79,63 @@ Wählt der Benutzer ``Datenschutzerklärung'' auf der Impressum-Ansicht, wird ei
 \end{enumerate}
 
 \section{Web-Dienst}
-\begin{enumerate}[\bfseries{FA}10]
+\begin{enumerate}
+\renewcommand{\labelenumi}{\textbf{\theenumi}}
+\renewcommand{\theenumi}{FA\arabic{enumi}0}
 \setcounter{enumi}{199}
+
 \item  \textbf{Empfangen eines Videos von der App} \hfill \\
-Bekommt der Web-Service eine Anfrage von der App ein Video hochzuladen, so überprüft er zunächst, ob er die Anfrage bearbeiten kann, oder ob bereits zu viele andere Anfragen gestellt wurden (NAxx). Ist dies nicht der Fall, so speichert er das Video temporär und beginnt die Anonymisierung (FAxx-FAxx).
+Bekommt der Web-Service eine Anfrage von der App ein Video hochzuladen, so überprüft er zunächst, ob er die Anfrage bearbeiten kann, oder ob bereits zu viele andere Anfragen gestellt wurden ~\eqref{na:paralleleZugriffe}. Ist dies nicht der Fall, so speichert er das Video temporär~\eqref{fa:entschVideo} und beginnt die Anonymisierung~\eqref{fa:anonymVideo}.
 
-\item  \textbf{Entschlüsseln eines empfangenen Videos} \hfill \\
-Bevor der Web-Service die Bearbeitung des Videos beginnt, entschlüsselt er das empfangene verschlüsselte Video. Hierbei wird das unter Kaptiel X.Y defininierte Verschlüsselungsverfahren angewandt. Das entschlüsselte Video wird lokal temporär gespeichert.
+\item  \label{fa:entschVideo}\textbf{Entschlüsseln eines empfangenen Videos} \hfill \\
+Bevor der Web-Service die Bearbeitung des Videos beginnt, entschlüsselt er das empfangene verschlüsselte Video. Hierbei wird das unter Kaptiel 9.4 defininierte Verschlüsselungsverfahren angewandt. Das entschlüsselte Video wird lokal temporär gespeichert.
 
-\item  \textbf{Identifizieren der relevanten Bildbereiche} \hfill \\
+\item  \label{fa:relBildbereiche}\textbf{Identifizieren der relevanten Bildbereiche} \hfill \\
 Der Web-Service nimmt das entschlüsselte Video und lässt einen Bildfilter über das Video laufen, der die für die Anonymisierung relevanten Bildbereiche (Gesichter, Nummernschilder, etc.) erkennt. Die so ermittelteten Bereiche werden in einer Bitmaske gespeichert.
 
-\item  \textbf{Anonymisierung des Videos} \hfill \\
-Der Web-Service nimmt die in FAxx erstellte Bitmaske um die dort makierten relevanten Bildbereiche mithilfe eines Anonymisierungsfilters zu anonymisieren.
+\item  \label{fa:anonymVideo}\textbf{Anonymisierung des Videos} \hfill \\
+Der Web-Service nimmt die in ~\eqref{fa:relBildbereiche} erstellte Bitmaske um die dort makierten relevanten Bildbereiche mithilfe eines Anonymisierungsfilters zu anonymisieren.
 
-\item  \textbf{Abspeichern eines anonymisierten Videos} \hfill \\
-Nachdem das Video anonymisiert wurde, wird es lokal auf dem Server gespeichert und alle temporären Dateien gelöscht. Das gespeicherte Video wird der Videoverwaltung hinzugefügt damit es vom Benutzer eingesehen und bearbeitet werden kann. Wenn ein Benutzer die maximale Anzahl Videos pro Account (NAxx) überschreitet, wir automatisch das älteste Video des Accounts auf dem Server gelöscht.
+\item \label{fa:speichVideo}\textbf{Abspeichern eines anonymisierten Videos} \hfill \\
+Nachdem das Video anonymisiert wurde, wird es lokal auf dem Server gespeichert und alle temporären Dateien gelöscht. Das gespeicherte Video wird der Videoverwaltung hinzugefügt damit es vom Benutzer eingesehen und bearbeitet werden kann. Wenn ein Benutzer die maximale Anzahl Videos pro Account ~\eqref{na:VideoKap} überschreitet, wir automatisch das älteste Video des Accounts auf dem Server gelöscht.
 \end{enumerate}
 
 \section{Web-Interface}
-\begin{enumerate}[\bfseries{FA}10]
+\begin{enumerate}
+\renewcommand{\labelenumi}{\textbf{\theenumi}}
+\renewcommand{\theenumi}{FA\arabic{enumi}0}
 \setcounter{enumi}{299}
 \item \textbf{Anzeigen der Einlog-Ansicht} \hfill \\
-Ruft der Nutzer die Privacy-Crash-Cam-Webseite auf, so gelangt er zu der Einlog-Ansicht. Dort kann sich der Benutzer anmelden (FAxx) oder sich registrieren (FAxx).
+Ruft der Nutzer die Privacy-Crash-Cam-Webseite auf, so gelangt er zu der Einlog-Ansicht. Dort kann sich der Benutzer anmelden ~\eqref{fa:weblogIn} oder sich registrieren (~\eqref{fa:erstellAcc}.
 
-\item \textbf{Erstellen eines Benutzeraccount} \hfill \\
+\item \label{fa:erstellAcc}\textbf{Erstellen eines Benutzeraccount} \hfill \\
 Klickt der Benutzer auf "'Account erstellen"' so öffnet sich der Registrierungsdialog. Dort wird der Nutzer gebeten einen einzigartigen Benutzername und eine E-Mail Adresse angegeben. Zudem muss er ein Passwort auswählen und bestätigen. Klickt der Nutzer auf "'Registrierung abschließen"' werden die Eingaben überprüft. Schlägt dies fehl bleibt der Benutzer in dem Registrierungsdialog. Nach dem Erstellen eines Benutzeraccounts sendet der Server eine Bestätigungsmail. Der Nutzer muss den dort enthaltenen Link klicken, um seinen Account zu verifizieren. Danach kann er sich auf der Webseite anmelden.
 
-\item \textbf{Löschen eines Benutzeraccounts} \hfill \\
+\item \label{fa:löschAcc}\textbf{Löschen eines Benutzeraccounts} \hfill \\
 Klickt ein Benutzer in der Menüleiste auf "'Account Löschen"', so wird ein Bestätigungsdialog geöffnet. Bestätigt der Nutzer, so wird er ausgeloggt. Daraufhin werden alle, von ihm hochgeladenen Videos vom Server und daraufhin seine Accountdaten gelöscht.
 
-\item \textbf{Einloggen auf die Webseite} \hfill \\
-Zum Einloggen auf die Webseite müssen Benutzername und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte User (siehe FAxx) können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten Web-Sitzung ausloggen, bevor er sich einloggen kann. Bei falschen Eingaben oder wenn der Nutzer bereits eingeloggt ist kehrt er zur Einlog-Ansicht zurück und erhält eine Fehlermeldung.
+\item \label{fa:weblogIn}\textbf{Einloggen auf die Webseite} \hfill \\
+Zum Einloggen auf die Webseite müssen Benutzername und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte User ~\eqref{fa:erstellAcc} können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten Web-Sitzung ausloggen, bevor er sich einloggen kann. Bei falschen Eingaben oder wenn der Nutzer bereits eingeloggt ist kehrt er zur Einlog-Ansicht zurück und erhält eine Fehlermeldung.
 
-\item \textbf{Ausloggen von der Webseite} \hfill \\
+\item \label{fa:weblogOut}\textbf{Ausloggen von der Webseite} \hfill \\
 Klickt ein Benutzer in der Menüleiste auf "'Ausloggen"' so wird er auf die Einlog-Ansicht zurückgeleitet. Schließt ein Nutzer die Webseite, so wird er automatisch ausgeloggt.
 
 \item \textbf{Anzeigen der Menüleiste} \hfill \\
-Befindet sich der Nutzer in einer anderen Ansicht als der Einlog-Ansicht, so befindet sich am linken Rand der Websteite die Menüleiste. Dort kann der Nutzer die Liste der anonymisierten Videos (FAxx), Datenschutzerklärung einsehen (FAxx), das Impressum einsehen (FAxx), sich ausloggen (FAxx), seinen Account löschen (FAxx).
+Befindet sich der Nutzer in einer anderen Ansicht als der Einlog-Ansicht, so befindet sich am linken Rand der Websteite die Menüleiste. Dort kann der Nutzer die Liste der anonymisierten Videos ~\eqref{fa:anonymVidAnzeigen}, Datenschutzerklärung einsehen ~\eqref{fa:datenschAnzeigen}, das Impressum einsehen ~\eqref{fa:imprAnzeigen}, sich ausloggen ~\eqref{fa:weblogOut}, seinen Account löschen ~\eqref{fa:löschAcc}.
 
-\item \textbf{Anzeigen der Liste der anonymisierten Videos} \hfill \\
-Hat sich ein Benutzer eingeloggt wird er automatisch auf diese Ansicht weitergeleitet. Hier werden die, von dem Nutzer hochgeladenen Videos chronologisch aufgelistet. Der Nutzer kann Videos herunterladen (FAxx), löschen (FAxx), ein Preview einsehen (FAxx) oder die Videoinformationen einsehen (FAxx).
+\item \label{fa:anonymVidAnzeigen}\textbf{Anzeigen der Liste der anonymisierten Videos} \hfill \\
+Hat sich ein Benutzer eingeloggt wird er automatisch auf diese Ansicht weitergeleitet. Hier werden die, von dem Nutzer hochgeladenen Videos chronologisch aufgelistet. Der Nutzer kann Videos herunterladen ~\eqref{fa:anonymVidherunt}, löschen ~\eqref{fa:anonymVidlösch}, ein Preview einsehen ~\eqref{fa:anonymVidprev} oder die Videoinformationen einsehen ~\eqref{fa:anonymViddaten}.
 
-\item \textbf{Herunterladen von anonymisierten Videos} \hfill \\
+\item \label{fa:anonymVidherunt}\textbf{Herunterladen von anonymisierten Videos} \hfill \\
 Durch einen Klick wird eine Speicherdialog geöffnet. Nachdem der Nutzer einen Speicherort ausgewählt hat wird das Video heruntergeladen. Bricht der Benutzer den Dialog ab bleibt er in der Listenansicht seiner Videos.
 
-\item \textbf{Löschen eines anonymisierten Videos} \hfill \\
+\item \label{fa:anonymVidlösch}\textbf{Löschen eines anonymisierten Videos} \hfill \\
 Durch den Klick auf das "'Löschen-Symbol"' wird ein Bestätigungsdialog geöffnet. Falls der Benutzer bestätigt wird das Video aus der Liste seiner hochgeladenen Videos entfernt und vom Server gelöscht. Bricht der Benutzer den Dialog ab bleibt er in der Listenansicht seiner Videos.
 
-\item \textbf{Vorschau eines anonymisierten Videos} \hfill \\
+\item \label{fa:anonymVidprev}\textbf{Vorschau eines anonymisierten Videos} \hfill \\
 Klickt der Benutzer auf das "'Vorschau-Symbol"', so wird ein Fenster geöffnet, in dem der Nutzer ein Vorschau des anonymisierten Videos angezeigt wird.
 
-\item \textbf{Einsehen von Video-Daten der anonymisierten Videos} \hfill \\
+\item \label{fa:anonymViddaten}\textbf{Einsehen von Video-Daten der anonymisierten Videos} \hfill \\
 Klickt der Benutzer auf das "'Info-Symbol"', so wird ein Fenster geöffnet, dass dem Benutzer die Video-Metadaten (Erstellungsdatum, Datum der Anonymisierung, Größe, Auflösung, Dauer) anzeigt.
 
 \item \textbf{Anzeigen der Datenschutzerklärung} \hfill \\
