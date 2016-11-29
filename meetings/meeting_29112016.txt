@@ -1,2 +1,24 @@
 - OpenCV Technologie & Schnittstelle beschreiben in FA? Musskriterein? Produktumgebung?
+Schnittstellen in Entwurf beschreiben
+
 - Vaadin, Jersey, Jetty, RSA in Entwicklungsumgebung?
+OK
+
+-Preäsentation Inhalt?
+Organisation, Arbeitsklima
+Relevante Musskriterien vorstellen
+UI
+
+Maven wird verwendet
+
+RSA, AIS in Pflichtenheft schreiben.
+
+Metadaten entweder in Container oder getrennt Speichern. Genauer schreiben in PK1060…
+Web Interface soll Metadaten anzeigen können.
+GPS Location als Kannkriterien + Begründung warum Kannkriterium
+Kann: Server behält originalen Metadaten und verifiziert anonymisierte Metadaten.
+
+Email + Pw ändern  zu FA + Zielbest. hinzufügen
+PW als Hash abspeichern
+
+Alle Web-Service zu Web-Dienst ändern

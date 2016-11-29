@@ -46,11 +46,21 @@ Der \gls{Ringpuffer}~\eqref{fa:Ringpuffer} stellt einen temporären Speicher dar
 \item \label{fa:Verschluesselung}\textbf{Verschlüsseln eines Videos} \hfill \\
 Videodaten werden durch das unter Kaptiel 9.4 defininierte hybrides Verschlüsselungsverfahren verschlüsselt.
 
-\item \textbf{Anzeigen des Menüs} \hfill \\
-Drückt der Benutzer den "'Menü-Button"' in der oberen linken Ecke des Bildschirms, so öffnet sich das Menü. befindet sich die Kamrea im Beobachtungsmodus, während das Menü geöffnet wird, wird die Aufnahme nicht gestoppt. In dem Menü hat der Benutzer die Möglichkeit zwischen den verschiedenen \gls{App}-Ansichten Video-Ansicht~\eqref{fa:vidAnsicht}, Einstellungs-Ansicht~\eqref{fa:einstAnsicht} und Impressum-Ansicht~\eqref{fa:imprAnsicht} oder sich auszuloggen~\eqref{fa:logOut}.
+\item \begin{minipage}[t]{\linewidth} 
+\textbf{Anzeigen des Menüs} \hfill \\
+	\begin{wrapfigure}{r}{0.4\linewidth}
+		\vspace{-70pt}
+  		\begin{center}
+   			\includegraphics[width=0.4\textwidth]{subtopicsFuncspec/Res/Mockups/Portrait_camera_view_menu_phone.png}
+  		\end{center}
+  		\vspace{-20pt}
+  		\vspace{-10pt}
+	\end{wrapfigure}
+Drückt der Benutzer den ``Menü-Button'' in der oberen linken Ecke des Bildschirms, so öffnet sich das Menü. befindet sich die Kamera im Beobachtungsmodus, während das Menü geöffnet wird, wird die Aufnahme nicht gestoppt. In dem Menü hat der Benutzer die Möglichkeit zwischen den verschiedenen \gls{App}-Ansichten Video-Ansicht~\eqref{fa:vidAnsicht}, Einstellungs-Ansicht~\eqref{fa:einstAnsicht} und Impressum-Ansicht~\eqref{fa:imprAnsicht} oder sich auszuloggen~\eqref{fa:logOut}.
 
 \item \label{fa:vidAnsicht}\textbf{Anzeigen der Liste der \glslink{persistieren}{persistierten} Videos} \hfill \\
-Wählt der Benutzer im Menü die Option "'Meine Videos"', so gelangt er zu einer Ansicht, in dem ihm seine \glslink{persistieren}{persistierten} Videos chronologisch aufgelistet werden. Der Nutzer kann Videos hochladen~\eqref{fa:vidHochladen}, löschen~\eqref{fa:vidLöschen}, oder Videoinformationen einsehen~\eqref{fa:metaVerschlVid}.
+Wählt der Benutzer im Menü die Option ``Aufgenommen'', so gelangt er zu einer Ansicht, in dem ihm seine \glslink{persistieren}{persistierten} Videos chronologisch aufgelistet werden. Der Nutzer kann Videos hochladen~\eqref{fa:vidHochladen}, löschen~\eqref{fa:vidLöschen}, oder Videoinformationen einsehen~\eqref{fa:metaVerschlVid}.
+\end{minipage}
 
 \item \label{fa:vidHochladen}\textbf{Hochladen von gespeicherten Videos} \hfill \\
 Klickt der Nutzer auf den ``Upload-Button'', wird ein Dialog aufgerufen, in dem der Nutzer darauf hingewiesen wird, dass mobile Daten anfallen werden. Wenn der Benutzer akzeptiert, schickt die \gls{App} eine Anfrage an den Server. Dieser beantwortet die Anfrage falls Ressourcen verfügbar und die auf dem Gerät gespeicherten Anmeldedaten des Nutzers korrekt sind und erlaubt den Upload. In jedem Fall wird dem Nutzer eine Erfolgs- bzw. Misserfolgsnachricht gezeigt. Durch Tippen auf diese kann er zur Liste seiner Videos~\eqref{fa:vidAnsicht} gelangen.
@@ -61,14 +71,25 @@ Klickt der Benutzer auf das ``Löschen-Symbol'', so wird ein Bestätigungsdialog
 \item \label{fa:vidLöschenDialog}\textbf{Anzeigen einer Benachrichtigung zum Löschen von Videos} \hfill \\
 Beim Einloggen und bei jedem Appstart wird geprüft, ob \glslink{persistieren}{persistierte} Videos bereits seit über 4 Wochen auf seinem Gerät gespeichert sind. Ist dies so wird ihm ein Dialog angezeigt, der ihn auf diesen Umstand hinweist. Dort wird ihm angeboten, das Video zu löschen~\eqref{fa:vidLöschen}. Bricht er den Dialog ab, gelangt er wie üblich in die Kamera-Ansicht~\eqref{fa:camStart}.
 
-\item \label{fa:metaVerschlVid}\textbf{Einsehen von Video-Daten der \glslink{anonymisieren}{anonymisierten} Videos} \hfill \\
-Klickt der Benutzer das ``Info-Symbol'' wird ein Fenster geöffnet, dass dem Benutzer die Video-\gls{Metadaten} (Erstellungsdatum, Größe, Auflösung, Dauer, Auslöseart, \gls{G-Sensor}-Daten) als Dialog anzeigt. Schließt der Nutzer den Dialog, kehrt er zu der Liste seiner Videos~\eqref{fa:vidAnsicht} zurück.
+\item \label{fa:metaVerschlVid}
+\textbf{Einsehen von Video-Daten der verschlüsselten Videos} \hfill \\
+\begin{minipage}[t]{\linewidth}
+	\begin{wrapfigure}{r}{0.4\linewidth}
+		\vspace{-35pt}
+  		\begin{center}
+   			\includegraphics[width=0.4\textwidth]{subtopicsFuncspec/Res/Mockups/Videos_list1_phone.png}
+  		\end{center}
+  		\vspace{-20pt}
+  		\vspace{-10pt}
+	\end{wrapfigure}
+Klickt der Benutzer lange auf ein Video wird ein Fenster geöffnet, dass dem Benutzer die Video-\gls{Metadaten} (Erstellungsdatum, Größe, Auflösung, Dauer, Auslöseart, \gls{G-Sensor}-Daten) als Dialog anzeigt. Schließt der Nutzer den Dialog, kehrt er zu der Liste seiner Videos~\eqref{fa:vidAnsicht} zurück.
 
-\item \label{fa:einstAnsicht}\textbf{Anzeigen der Einstellungen}
+\item \label{fa:einstAnsicht}\textbf{Anzeigen der Einstellungen} \hfill \\
 Wählt der Benutzer im Menü die Option ``Einstellungen'', so werden dem Nutzer die Standardeinstellungen angezeigt (Auflösung, Bildwiederholrate, Größe \gls{Ringpuffer}) angezeigt.
 
 \item \label{fa:imprAnsicht}\textbf{Anzeigen rechtlicher Informationen} \hfill \\
 Wählt der Benutzer im Menü die Option ``Impressum'', gelangt er zur Impressums-Ansicht. Von dort kann er sich das Impressum~\eqref{fa:imprAnzeigen} und die Datenschutzerklärung~\eqref{fa:datenschAnzeigen} anzeigen lassen.
+\end{minipage}
 
 \item \label{fa:imprAnzeigen}\textbf{Anzeigen des Impressums} \hfill \\
 Wählt der Benutzer ``Impressum'' auf der Impressum-Ansicht, wird ein Dialog angezeigt, der das Impressum anzeigt.
@@ -100,6 +121,8 @@ Der \gls{Web-Dienst} nimmt die in ~\eqref{fa:relBildbereiche} erstellte Bitmaske
 Nachdem das Video \glslink{anonymisieren}{anonymisiert} wurde, wird es lokal auf dem Server gespeichert und alle temporären Dateien gelöscht. Das gespeicherte Video wird der Videoverwaltung hinzugefügt damit es vom Benutzer eingesehen und bearbeitet werden kann. Wenn ein Benutzer die maximale Anzahl Videos pro Account ~\eqref{na:VideoKap} überschreitet, wir automatisch das älteste Video des Accounts auf dem Server gelöscht.
 \end{enumerate}
 
+\textbf{TODO Account löschen ist eine Funktion des Web-Diestes die vom Interface aufgerufen wird; Passwort ändern und Email ändern auch, diese Fktnen. fehlen aber ganz; Unterscheidung ob Nutzer bereits wo anders eingeloggt ist ist aufwendig und nicht wirklich praktikabel, sollten wir raus nehmen; zu Accounterstellung gehört auch speicherung des PW als Hash }
+
 \section{\gls{Web-Interface}}
 \begin{enumerate}
 \renewcommand{\labelenumi}{\textbf{\theenumi}}
@@ -115,7 +138,7 @@ Klickt der Benutzer auf "'Account erstellen"' so öffnet sich der Registrierungs
 Klickt ein Benutzer in der Menüleiste auf "'Account Löschen"', so wird ein Bestätigungsdialog geöffnet. Bestätigt der Nutzer, so wird er ausgeloggt. Daraufhin werden alle, von ihm hochgeladenen Videos vom Server und daraufhin seine Accountdaten gelöscht.
 
 \item \label{fa:weblogIn}\textbf{Einloggen auf die Webseite} \hfill \\
-Zum Einloggen auf die Webseite müssen Benutzername und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte User ~\eqref{fa:erstellAcc} können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten Web-Sitzung ausloggen, bevor er sich einloggen kann. Bei falschen Eingaben oder wenn der Nutzer bereits eingeloggt ist kehrt er zur Einlog-Ansicht zurück und erhält eine Fehlermeldung.
+Zum Einloggen auf die Webseite müssen Benutzername und Passwort korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte Nutzer ~\eqref{fa:erstellAcc} können sich einloggen. Ist ein Nutzer bereits angemeldet, so muss er sich zuerst in der zweiten Web-Sitzung ausloggen, bevor er sich einloggen kann. Bei falschen Eingaben oder wenn der Nutzer bereits eingeloggt ist kehrt er zur Einlog-Ansicht zurück und erhält eine Fehlermeldung.
 
 \item \label{fa:weblogOut}\textbf{Ausloggen von der Webseite} \hfill \\
 Klickt ein Benutzer in der Menüleiste auf "'Ausloggen"' so wird er auf die Einlog-Ansicht zurückgeleitet. Schließt ein Nutzer die Webseite, so wird er automatisch ausgeloggt.
