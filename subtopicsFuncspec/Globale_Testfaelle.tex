@@ -4,51 +4,51 @@ Um eine m\"oglichst fl\"achendeckende Qualita\"atssicherung zu ermo\"oglichen, w
 Zudem werden manuelle Tests durchgef\"uhrt, 
 Wir teilen die Testphase in mehrere Teilphasen ein, um Struktur in das Testen zu bekommen.
 \subsection{Komponententests}
-Komponententests sind allgemein dazu da, um einzelne Komponenten der Software zu testen. In unserem Beispiel werden wir den Java-Server, die Android-App und das Web-Interface auf deren Funktionalit\"at testen. 
+Komponententests sind allgemein dazu da, um einzelne Komponenten der Software zu testen. In unserem Beispiel werden wir den Java-Server, die \gls{Android}-\gls{App} und das \gls{Web-Interface} auf deren Funktionalit\"at testen. 
 \subsection{Integration-Testsuite}
-In der Integration-Testsuite wird die Kommunikation der Komponenten getestet. In unserem Beispiel wird die Verbindung von Web-Interface und App zum Web-Dienst getestet.
+In der Integration-Testsuite wird die Kommunikation der Komponenten getestet. In unserem Beispiel wird die Verbindung von \gls{Web-Interface} und \gls{App} zum \gls{Web-Dienst} getestet.
 \subsection{Systemtests}
 Die Software wird nun auf einer realen Umgebung installiert und mit Testdaten gef\"ullt. Dort wird die Software unter realen Bedingungen getestet.
 
 \section{Testzsenarien}
 \subsection{Komponententests}
 
-\subsubsection{App}
+\subsubsection{\gls{App}}
 \begin{enumerate}[\bfseries{T}10]  
 \setcounter{enumi}{99}{}
 
 \item \textbf{Accountanmeldung} \hfill\\  
-In der Anmeldeansicht wird der Benutzer aufgefordert, sich einzuloggen. Nach dem erfolgreichen Einloggen geht die App in den Beobachtungsmodus \"uber. 
+In der Anmeldeansicht wird der Benutzer aufgefordert, sich einzuloggen. Nach dem erfolgreichen Einloggen geht die \gls{App} in den Beobachtungsmodus \"uber. 
 
 \item \textbf{Men\"u \"offnen} \hfill\\
-Die App befindet sich im Beobachtungsmodus. Nach klicken des Men\"ubuttons wird das Men\"u angezeigt.
+Die \gls{App} befindet sich im Beobachtungsmodus. Nach klicken des Men\"ubuttons wird das Men\"u angezeigt.
 
 \item \textbf{Aufnahmemodus manuell starten} \hfill\\
-Die App befindet sich im Beobachtungsmodus. Durch doppeltes Dr\"ucken des Bildschirms wird in den Aufnahmemodus gewechselt. 
+Die \gls{App} befindet sich im Beobachtungsmodus. Durch doppeltes Dr\"ucken des Bildschirms wird in den Aufnahmemodus gewechselt. 
 
-\item \textbf{Ausl\"osen des G-Sensors} \hfill\\  
-Die App befindet sich im Beobachtungsmodus. Der G-Sensor des Ger\"ats l\"ost aus und es wird in den Aufnahmemodus gewechselt
+\item \textbf{Ausl\"osen des \gls{G-Sensor}s} \hfill\\  
+Die \gls{App} befindet sich im Beobachtungsmodus. Der \gls{G-Sensor} des Ger\"ats l\"ost aus und es wird in den Aufnahmemodus gewechselt
 
 \item \textbf{Beobachtungsmodus} \hfill\\
-Im Beobachtungsmodus wird der Ringpuffer beschrieben.
+Im Beobachtungsmodus wird der \gls{Ringpuffer} beschrieben.
 
 \item \textbf{Aufnahmemodus} \hfill\\  
-Die App wechselt gerade in den Aufnahmemodus. Nach weiteren 30 Sekunden wird das Video verschl\"usselt auf dem lokalen Speicherbereich abgelegt. Zudem wird es nun unter ``noch nicht hochgeladene Unf\"alle'' angezeigt. 
+Die \gls{App} wechselt gerade in den Aufnahmemodus. Nach weiteren 30 Sekunden wird das Video verschl\"usselt auf dem lokalen Speicherbereich abgelegt. Zudem wird es nun unter ``noch nicht hochgeladene Unf\"alle'' angezeigt. 
 
 \item \textbf{Ansicht gespeicherte Videos} \hfill\\
-Die App befindet sich in der Men\"uansicht. Nach dem Klicken des ``gespeicherte Videos'' Feldes werden alle lokal gespeicherten Videos angezeigt.
+Die \gls{App} befindet sich in der Men\"uansicht. Nach dem Klicken des ``gespeicherte Videos'' Feldes werden alle lokal gespeicherten Videos angezeigt.
 
 \item \textbf{Einstellungen} \hfill\\
-Die App befindet sich in der Men\"uansicht. Durch Klicken des ``Einstellungen'' Feldes werden die Einstellungen angezeigt.
+Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des ``Einstellungen'' Feldes werden die Einstellungen angezeigt.
 
 \item \textbf{Log-Out} \hfill\\
-Die App befindet sich in der Men\"uansicht. Durch Klicken des "Log-Out" Feldes wird der Benutzer aus seinem Account abgemeldet. Zus\"atzlich werden die Anmeldedaten gel\"oscht. Die App ist nun in der Anmeldeansicht.
+Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des "Log-Out" Feldes wird der Benutzer aus seinem Account abgemeldet. Zus\"atzlich werden die Anmeldedaten gel\"oscht. Die \gls{App} ist nun in der Anmeldeansicht.
 
 \item \textbf{Testen der Verschl\"usselung} \hfill\\
 Beim lokal verschl\"usselten Video wird getestet, ob das Video lesbar ist, bevor es entschl\"usselt wurde. Zudem wird getestet, ob das Video nach der Entschl\"usselung lesbar unverschl\"usselt vorliegt.
 \end{enumerate}
 
-\subsubsection{Web-Interface}
+\subsubsection{\gls{Web-Interface}}
 \begin{enumerate}[\bfseries{T}10]  
 \setcounter{enumi}{99}{}
 \item \textbf{Account erstellen} \hfill\\
@@ -61,7 +61,7 @@ Beim eingeben existierender Benutzerdaten auf der Anmeldeseite wird der Benutzer
 Die Website zeigt die Standardansicht an. Die hochgeladenen Videos werden angezeigt. 
 
 \item \textbf{Video herunterladen} \hfill\\
-Die Website zeigt die Standardseite an. Bei jedem Video ist ein Button zum herunterladen. Beim Bet\"atigen dieses Buttons wird das Video unverschl\"usselt, jedoch anonymisiert heruntergeladen.
+Die Website zeigt die Standardseite an. Bei jedem Video ist ein Button zum herunterladen. Beim Bet\"atigen dieses Buttons wird das Video unverschl\"usselt, jedoch \glslink{anonymisieren}{anonymisiert} heruntergeladen.
 
 \item \textbf{Video l\"oschen} \hfill\\
 Die Website zeigt die Standardansicht an. Bei jedem Video ist ein Button zum l\"oschen des Videos. Beim Bet\"atigen dieses Buttons wird nach einer Best\"atigung das Video gel\"oscht.
@@ -70,38 +70,38 @@ Die Website zeigt die Standardansicht an. Bei jedem Video ist ein Button zum l\"
 Die Website zeigt die Accountverwaltung an. Der Benutzer f\"uhrt eine Account\"anderung durch. Beim n\"achsten Anmeldeversuch sind die ge\"anderten Anmeldedaten g\"ultig.
 \end{enumerate}
 
-\subsubsection{Web-Dienst}
+\subsubsection{\gls{Web-Dienst}}
 \begin{enumerate}[\bfseries{T}10]  
 \setcounter{enumi}{99}{}
-\item \textbf{Anonymisierung des Videos auf dem Web-Dienst} \hfill\\  
-Der Benutzer bet\"atigt die Funktion ``Video hochladen''. Das Video wird zum Server gesendet, dort anonymisiert, gespeichert und mit dem Benutzeraccount verkn\"upft.
+\item \textbf{\glslink{anonymisieren}{Anonymisierung} des Videos auf dem \gls{Web-Dienst}} \hfill\\  
+Der Benutzer bet\"atigt die Funktion ``Video hochladen''. Das Video wird zum Server gesendet, dort \glslink{anonymisieren}{anonymisiert}, gespeichert und mit dem Benutzeraccount verkn\"upft.
 \end{enumerate}
 
 
 \subsection{Integration-Tests}
-\subsubsection{App <-> Web-Dienst}
+\subsubsection{\gls{App} <-> \gls{Web-Dienst}}
 \begin{enumerate}[\bfseries{T}10]  
 \setcounter{enumi}{99}{}
 
-\item \textbf{Anmelden in der App} \hfill\\
-Die App zeigt das Anmeldefenster an. Der Benutzer gibt seine Anmeldedaten ein. Die Daten werden an den Web-Dienst geschickt und verifiziert. Der Log-In war erfolgreich, wenn der Web-Dienst die Accountdaten best\"atigt.
+\item \textbf{Anmelden in der \gls{App}} \hfill\\
+Die \gls{App} zeigt das Anmeldefenster an. Der Benutzer gibt seine Anmeldedaten ein. Die Daten werden an den \gls{Web-Dienst} geschickt und verifiziert. Der Log-In war erfolgreich, wenn der \gls{Web-Dienst} die Accountdaten best\"atigt.
 
 \item \textbf{Video hochladen} \hfill\\
-Die App zeigt die gespeicherten Videos an. Nach Bet\"atigen des ``hochladen''-Buttons wird das Video auf den Web-Dienst hochgeladen, gesichtert und mit dem Benutzeraccount verkn\"upft.
+Die \gls{App} zeigt die gespeicherten Videos an. Nach Bet\"atigen des ``hochladen''-Buttons wird das Video auf den \gls{Web-Dienst} hochgeladen, gesichtert und mit dem Benutzeraccount verkn\"upft.
 \end{enumerate}
 
-\subsubsection{Web-Interface <-> Web-Dienst}
+\subsubsection{\gls{Web-Interface} <-> \gls{Web-Dienst}}
 \begin{enumerate}[\bfseries{T}10]  
 \setcounter{enumi}{99}{}
 
 \item \textbf{Account erstellen} \hfill\\
-Der Benutzer erstellt \"uber das Web-Interface einen Account. Durch den Button ``Account erstellen'' wird eine POST Anfrage an den Web-Dienst gesendet und auf der Datenbank wird der Account hinzugef\"ugt.
+Der Benutzer erstellt \"uber das \gls{Web-Interface} einen Account. Durch den Button ``Account erstellen'' wird eine POST Anfrage an den \gls{Web-Dienst} gesendet und auf der Datenbank wird der Account hinzugef\"ugt.
 
 \item \textbf{Hochgeladene Videos anzeigen} \hfill\\
-Die Website zeigt die Standardansicht an. Es wird vom Web-Interface eine Anfrage an den Web-Dienst geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der Web-Dienst antwortet mit den hochgeladenen Videos des Benutzers und die Videos werden in der Standardansicht angezeigt. 
+Die Website zeigt die Standardansicht an. Es wird vom \gls{Web-Interface} eine Anfrage an den \gls{Web-Dienst} geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der \gls{Web-Dienst} antwortet mit den hochgeladenen Videos des Benutzers und die Videos werden in der Standardansicht angezeigt. 
 
 \item \textbf{Passwort\"anderung} \hfill\\
-Der Benutzer will sein Passwort \"andern. Er gibt sein neues Passwort doppelt ein und best\"atigt die \"Anderungen. Darauf wird eine Anfrage des Web-Interface an den Server gesendet, dieser bearbeitet diese und liefert eine Antwort, welche dann vom Web-Interface in Form einer Benachrichtigung dargestellt wird.
+Der Benutzer will sein Passwort \"andern. Er gibt sein neues Passwort doppelt ein und best\"atigt die \"Anderungen. Darauf wird eine Anfrage des \gls{Web-Interface} an den Server gesendet, dieser bearbeitet diese und liefert eine Antwort, welche dann vom \gls{Web-Interface} in Form einer Benachrichtigung dargestellt wird.
 
 \item \textbf{Video l\"oschen} \hfill\\
 Die Website zeigt die Standardansicht. Der Benutzer ein Video l\"oschen. Er bet\"atigt den ``L\"oschen''-Button des Videos. Nach Best\"atigen des Vorgangs verschwindet das Video in der Ansicht und ist gel\"oscht.
