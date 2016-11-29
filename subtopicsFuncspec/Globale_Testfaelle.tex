@@ -6,7 +6,7 @@ Wir teilen die Testphase in mehrere Teilphasen ein, um Struktur in das Testen zu
 \subsection{Komponententests}
 Komponententests sind allgemein dazu da, um einzelne Komponenten der Software zu testen. In unserem Beispiel werden wir den Java-Server, die Android-App und das Web-Interface auf deren Funktionalit\"at testen. 
 \subsection{Integration-Testsuite}
-In der Integration-Testsuite wird die Kommunikation der Komponenten getestet.
+In der Integration-Testsuite wird die Kommunikation der Komponenten getestet. In unserem Beispiel wird die Verbindung von Web-Interface und App zum Web-Dienst getestet.
 \subsection{Systemtests}
 Die Software wird nun auf einer realen Umgebung installiert und mit Testdaten gef\"ullt. Dort wird die Software unter realen Bedingungen getestet.
 
@@ -100,8 +100,11 @@ Der Benutzer erstellt \"uber das Web-Interface einen Account. Durch den Button `
 \item \textbf{Hochgeladene Videos anzeigen} \hfill\\
 Die Website zeigt die Standardansicht an. Es wird vom Web-Interface eine Anfrage an den Web-Dienst geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der Web-Dienst antwortet mit den hochgeladenen Videos des Benutzers und die Videos werden in der Standardansicht angezeigt. 
 
-\item \textbf{Passwort\"anderung im Web-Interface} \hfill\\
+\item \textbf{Passwort\"anderung} \hfill\\
 Der Benutzer will sein Passwort \"andern. Er gibt sein neues Passwort doppelt ein und best\"atigt die \"Anderungen. Darauf wird eine Anfrage des Web-Interface an den Server gesendet, dieser bearbeitet diese und liefert eine Antwort, welche dann vom Web-Interface in Form einer Benachrichtigung dargestellt wird.
+
+\item \textbf{Video l\"oschen} \hfill\\
+Die Website zeigt die Standardansicht. Der Benutzer ein Video l\"oschen. Er bet\"atigt den ``L\"oschen''-Button des Videos. Nach Best\"atigen des Vorgangs verschwindet das Video in der Ansicht und ist gel\"oscht.
 
 \end{enumerate}
 
@@ -109,5 +112,6 @@ Der Benutzer will sein Passwort \"andern. Er gibt sein neues Passwort doppelt ei
 \begin{enumerate}[\bfseries{T}10]  
 \setcounter{enumi}{99}{}
 
-\item \textbf{App starten} \hfill\\  
+\item \textbf{Systemtest} \hfill\\  
+Das System wird auf einer realen Umgebung installiert und mit Testdaten ge\"ullt. Die Software wird nun unter realen Bedingungen getestet.
 \end{enumerate}
