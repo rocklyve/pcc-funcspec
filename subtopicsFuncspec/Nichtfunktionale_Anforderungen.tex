@@ -1,49 +1,49 @@
 \chapter{Nichtfunktionale Anforderungen}
 
-\section{App}
+\section{\gls{App}}
 \begin{enumerate}
 \renewcommand{\labelenumi}{\textbf{\theenumi}}
 \renewcommand{\theenumi}{NA\arabic{enumi}0}
 \setcounter{enumi}{99}
-\item \textbf{Ringpufferkapazität} \hfill\\ Der Ringpuffer speichert XX Minuten an Video-Daten.
+\item \textbf{\gls{Ringpuffer}-Kapazität} \hfill\\ Der \gls{Ringpuffer} speichert XX Minuten an Video-Daten.
 
-\item \textbf{Zusatzspeicher nach Auslösen} \hfill\\ Nach Auslösen des G-Sensors/Speicherbutton wird zusätzlich zum Ringpuffer die folgenden XX Minuten Video persistiert.
+\item \textbf{Zusatzspeicher nach Auslösen} \hfill\\ Nach Auslösen des \glslink{G-Sensor}{G-Sensors}/Speicherbutton wird zusätzlich zum \gls{Ringpuffer} die folgenden XX Minuten Video \glslink{persistieren}{persistiert}.
 
-\item \label{na:GSensfront}\textbf{G Sensor Empfindlichkeit frontal} \hfill\\  Der G-Sensor soll bei einer Vorwärts-/Rückwärts-Bewegung beim überschreiten von 3 G auslösen.
+\item \label{na:GSensfront}\textbf{\gls{G-Sensor} Empfindlichkeit frontal} \hfill\\  Der \gls{G-Sensor} soll bei einer Vorwärts-/Rückwärts-Bewegung beim überschreiten von 3 G auslösen.
 
-\item \textbf{G Sensor Empfindlichkeit horizontal} \hfill\\  Der G-Sensor soll bei einer Links-/rechts Bewegung beim Überschreiten von 3 G auslösen.
+\item \textbf{\gls{G-Sensor} Empfindlichkeit horizontal} \hfill\\  Der \gls{G-Sensor} soll bei einer Links-/rechts Bewegung beim Überschreiten von 3 G auslösen.
 
-\item \label{na:GSensvert}\textbf{G Sensor Empfindlichkeit vertikal} \hfill\\  Der G-Sensor soll bei einer Auf-/Ab Bewegung beim Überschreiten von 4 G auslösen.
+\item \label{na:GSensvert}\textbf{\gls{G-Sensor} Empfindlichkeit vertikal} \hfill\\  Der \gls{G-Sensor} soll bei einer Auf-/Ab Bewegung beim Überschreiten von 4 G auslösen.
 
-\item \textbf{Videokapazität der App} \hfill\\  Ein Benutzer kann bis zu 20 Videos in der App speichern und verwalten.
+\item \textbf{Videokapazität der \gls{App}} \hfill\\  Ein Benutzer kann bis zu 20 Videos in der \gls{App} speichern und verwalten.
 
 \item \textbf{Benachrichtigung zum Löschen} \hfill\\  Die Benachrichtigung zum Löschen eines Videos, soll 10 Tage nach dessen Speicherung erfolgen.
 \end{enumerate}
 
-\section{Web-Dienst}
+\section{\gls{Web-Dienst}}
 \begin{enumerate}
 \renewcommand{\labelenumi}{\textbf{\theenumi}}
 \renewcommand{\theenumi}{NA\arabic{enumi}0}
 \setcounter{enumi}{199}
 
-\item \label{na:paralleleZugriffe}\textbf{Parallele Zugriffe} \hfill\\  Es sollen bis zu XX Videos parallel anonymisiert werden können.
+\item \label{na:paralleleZugriffe}\textbf{Parallele Zugriffe} \hfill\\  Es sollen bis zu XX Videos parallel \glslink{anonymisieren}{anonymisiert} werden können.
 
 \item \textbf{Anonymisierungsdauer} \hfill\\  Ein Anonymisierungsvorgang soll nicht länger als XX Sekunden dauern.
 \end{enumerate}
 
-\section{Webinterface}
+\section{\gls{Web-Interface}}
 \begin{enumerate}
 \renewcommand{\labelenumi}{\textbf{\theenumi}}
 \renewcommand{\theenumi}{NA\arabic{enumi}0}
 \setcounter{enumi}{299}
 
-\item \textbf{Größenanpassung} \hfill\\  Die Webseite soll Responsive-Design umsetzen.
+\item \textbf{Größenanpassung} \hfill\\  Die Website soll \gls{Responsive-Design} umsetzen.
 
 \item \textbf{Gleichzeitiges Benutzen der Website} \hfill\\  Es sollen XX Benutzer in der Lage sein, die Website gleichzeitig zu benutzen.
 
 \item \textbf{Benutzerkontenkapazität} \hfill\\  Es sollen bis zu XX Benutzerkonten verwaltet werden können.
 
-\item \label{na:VideoKap}\textbf{Videokapazität der Website} \hfill\\  Ein Benutzer kann bis zu 10 Videos auf der Webseite speichern und verwalten.
+\item \label{na:VideoKap}\textbf{Videokapazität der Website} \hfill\\  Ein Benutzer kann bis zu 10 Videos auf der Website speichern und verwalten.
 
 \item \textbf{Benachrichtigung zum Löschen} \hfill\\  Die Benachrichtigung zum Löschen eines Videos, soll 15 Tage nach dessen Speicherung erfolgen.
 
