@@ -1,0 +1,5 @@
+*.snm
+*.nav
+*.xml
+*.bcf
+.DS_Store
