@@ -12,7 +12,7 @@
 Anmeldedaten bestehen aus der E-Mai-Adresse und dem Passwort des Nutzers. Anemeldedaten werden lokal auf dem Gerät abgespeichert. Das Passwort wird als \gls{Hash-Code} gespeichert.
 
 \item \textbf{Einloggen in die \gls{App}} \hfill \\
-Beim Appstart muss sich der Nutzer zunächst einloggen. Zum Einloggen in die \gls{App} müssen die Anmeldedaten~\eqref{fa:Anmeldedaten} des Nutzers korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte Nutzer ~\eqref{fa:erstellAcc}) können sich einloggen. Beim Einloggen werden Nutzername und Passwort durch eine Serveranfrage geprüft. Bei falschen Eingaben oder wenn der Nutzer seinen Account nicht verifiziert hat erhält der Nutzer eine Fehlermeldung. Hat sich ein Nutzer bereits zuvor angemeldet, ohne sich wieder abzumelden, gelangt der Nutzer direkt zur Kamera-Ansicht. Die überprüfung der gespeicherten Anmeldedaten erfolgt dann erst beim Hochladen verschlüsselter Videodaten auf den Server~\eqref{fa:vidHochladen}.
+Beim Appstart muss sich der Nutzer zunächst einloggen. Zum Einloggen in die \gls{App} müssen die Anmeldedaten~\eqref{fa:Anmeldedaten} des Nutzers korrekt in die entsprechenden Felder eingetragen sein. Nur verifizierte Nutzer ~\eqref{fa:erstellAcc}) können sich einloggen. Bei falschen Eingaben hat, erhält der Nutzer eine Fehlermeldung. Hat sich ein Nutzer bereits zuvor angemeldet, ohne sich wieder abzumelden, gelangt der Nutzer direkt zur Kamera-Ansicht. Die Überprüfung der gespeicherten Anmeldedaten erfolgt dann erst beim Hochladen verschlüsselter Videodaten auf den Server~\eqref{fa:vidHochladen}.
 
 \item \label{fa:logOut}\textbf{Ausloggen von einem Benutzeraccount} \hfill \\
 Klickt ein Benutzer im Menü auf ``ausloggen'', so wird er auf die Einlog-Ansicht zurückgeleitet und seine Anemldedaten~\eqref{fa:Anmeldedaten} vom Gerät gelöscht.
@@ -129,8 +129,6 @@ Der \gls{Web-Dienst} nimmt die in ~\eqref{fa:relBildbereiche} erstellte Bitmaske
 \item \label{fa:speichVideo}\textbf{Abspeichern eines \glslink{anonymisieren}{anonymisierten} Videos} \hfill \\
 Nachdem das Video anonymisiert wurde, wird es lokal auf dem Server gespeichert und alle temporären Dateien gelöscht. Das gespeicherte Video wird der Videoverwaltung hinzugefügt damit es vom Benutzer eingesehen und bearbeitet werden kann. Wenn ein Benutzer die maximale Anzahl Videos pro Account ~\eqref{na:VideoKap} überschreitet, wir automatisch das älteste Video des Accounts auf dem Server gelöscht.
 \end{enumerate}
-
-\textbf{TODO Account löschen ist eine Funktion des Web-Diestes die vom Interface aufgerufen wird; Passwort ändern und Email ändern auch, diese Fktnen. fehlen aber ganz; Unterscheidung ob Nutzer bereits wo anders eingeloggt ist ist aufwendig und nicht wirklich praktikabel, sollten wir raus nehmen; zu Accounterstellung gehört auch speicherung des PW als Hash }
 
 \section{\gls{Web-Interface}}
 \begin{enumerate}

@@ -72,9 +72,3 @@ Zur Verwaltung der Nutzerdaten und der hochgeladen Videos wird das Datenbanksyst
 Zur Erkennung der zu anonymisierenden Bildbereiche, sowie zur Anwendung der Anonymisierungsfilter werden OpenCV Algorithmen verwendet.
 
 \end{description}
-
-\section{Verschlüsselung}
-
-Um den Datenschutz zu gewährleisten, ist es eine zentrale Funktion der App und des Web-Dienst, dass Videos vor der Anonymisierung ausschließlich verschlüsselt gespeichert werden. Hierbei wendet die App beim Persistieren eine hybride Verschlüsselung an. Dadurch verbindet hybdride Verschlüsselung die Geschwindigkeit von symmetrischer Verschlüsselung mit der Sicherheit asymetrsicher Verschlüsselung.\\
-Zunächst wählt die App einen zufälligen symmetrischen Schlüssel. Mit diesem Schlüssel wird das Video symmetrisch verschlüsselt. Anschließend wird der Schlüssel asymmetrisch mit dem öffentlichen Schlüssel des Web-Dienst verschlüsselt. \\
-Als kryptographisches Verfahren werden hierbei AES für die symmetrische und RSA für die asymetrische Verschlüsselung verwendet.
