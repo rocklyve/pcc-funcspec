@@ -1,56 +1,78 @@
 \chapter{Globale Testf\"alle}
-\section{Erkl\"arung zu den Testsuites der Qualit\"atssicherung}
-Um eine m\"oglichst fl\"achendeckende Qualita\"atssicherung zu ermo\"oglichen, werden wir im Folgenden zwischen verschiedenen Arten von Testabla\"aufen unterscheiden. Wir bieten automatisierte Tests, die das Backend und Frontend testen. Das Ziel ist, 80 Prozent des geschriebenen Codes ausf\"urhrlich zu testen. \\
-Zudem werden manuelle Tests durchgef\"uhrt, 
-Wir teilen die Testphase in mehrere Teilphasen ein, um Struktur in das Testen zu bekommen.
-\subsection{Komponententests}
-Komponententests sind allgemein dazu da, um einzelne Komponenten der Software zu testen. In unserem Beispiel werden wir den Java-Server, die \gls{Android}-\gls{App} und das \gls{Web-Interface} auf deren Funktionalit\"at testen. 
-\subsection{Integration-Testsuite}
-In der Integration-Testsuite wird die Kommunikation der Komponenten getestet. In unserem Beispiel wird die Verbindung von \gls{Web-Interface} und \gls{App} zum \gls{Web-Dienst} getestet.
-\subsection{Systemtests}
-Die Software wird nun auf einer realen Umgebung installiert und mit Testdaten gef\"ullt. Dort wird die Software unter realen Bedingungen getestet.
+\section{Erkl\"arung zur Qualit\"atssicherung}
+Wir teilen die Testphase in mehrere Teilphasen ein, um sowohl Komponenten für sich als auch ihr zusammenarbeiten separat zu testen. Automatisierte Tests werden das Backend und Frontend testen. Zudem werden manuelle Tests, zur überpr\"ufung der Bedienbarkeit, durchgef\"uhrt.  Das Ziel ist, 80 Prozent des geschriebenen Codes ausf\"uhrlich zu testen.
 
-\section{Testzsenarien}
+\subsection{Komponenten-Tests}
+In den Komponenten-Tests werden wir unsere drei Komponenten, die \gls{App}, das \gls{Web-Interface} und den \gls{Web-Dienst}, unabhängig voneinander testen.
+
+\subsection{Integration-Tests}
+In den Integration-Tests wird die Kommunikation zwischen den Komponenten getestet. In dieser Phase wird die korrekte Implementierung und Funktion der Schnittstellen sichergestellt.
+
+\subsection{System-Tests}
+Die Software wird in einer realen Umgebung installiert und dort unter realen Bedingungen von uns getestet.
+
+\section{Testszenarien}
 \subsection{Komponententests}
 
 \subsubsection{\gls{App}}
 \begin{enumerate}[\bfseries{T}10]  
 \setcounter{enumi}{99}{}
 
+\item \textbf{Erstmaliges starten der \gls{App}} \hfill\\  
+Beim ersten Start der \gls{App} wird die Anmeldeansicht angezeigt.
+
 \item \textbf{Accountanmeldung} \hfill\\  
-In der Anmeldeansicht wird der Benutzer aufgefordert, sich einzuloggen. Nach dem erfolgreichen Einloggen geht die \gls{App} in den Beobachtungsmodus \"uber. 
+In der Anmeldeansicht wird der Benutzer aufgefordert, sich anzumelden. Nach erfolgreicher Anmeldung geht die \gls{App} in den Beobachtungsmodus \"uber.
 
 \item \textbf{Men\"u \"offnen} \hfill\\
 Die \gls{App} befindet sich im Beobachtungsmodus. Nach klicken des Men\"ubuttons wird das Men\"u angezeigt.
 
-\item \textbf{Aufnahmemodus manuell starten} \hfill\\
-Die \gls{App} befindet sich im Beobachtungsmodus. Durch doppeltes Dr\"ucken des Bildschirms wird in den Aufnahmemodus gewechselt. 
+\item \textbf{Accountabmeldung} \hfill\\  
+Die \gls{App} zeigt das Men\"u. Klickt der Benutzer auf abmelden, werden die Benutzerdaten von der \gls{App} gelöscht und er gelangt zur Anmeldeansicht.
 
-\item \textbf{Ausl\"osen des \gls{G-Sensor}s} \hfill\\  
-Die \gls{App} befindet sich im Beobachtungsmodus. Der \gls{G-Sensor} des Ger\"ats l\"ost aus und es wird in den Aufnahmemodus gewechselt
+\item \textbf{Starten der \gls{App} nach Erstanmeldung} \hfill\\  
+Bei Start der \gls{App} wird die Kameraansicht gezeigt und die \gls{App} befindet sich im Beobachtungsmodus.
 
 \item \textbf{Beobachtungsmodus} \hfill\\
 Im Beobachtungsmodus wird der \gls{Ringpuffer} beschrieben.
 
+\item \textbf{Stoppen des Beobachtungsmodus} \hfill\\  
+Die \gls{App} befindet sich im Beobachtungsmodus. Wird die \gls{App} geschlossen oder die Kameraansicht beendet so wird der Beobachtungsmodus beendet.
+
+\item \textbf{Aufnahmemodus manuell starten} \hfill\\
+Die \gls{App} befindet sich im Beobachtungsmodus. Durch doppeltes Dr\"ucken des Bildschirms wird in den Aufnahmemodus gewechselt. 
+
+\item \textbf{Ausl\"osen des \glslink{G-Sensor}{G-Sensors}} \hfill\\  
+Die \gls{App} befindet sich im Beobachtungsmodus. Löst der \gls{G-Sensor} des Ger\"ats aus und es wird in den Aufnahmemodus gewechselt
+
 \item \textbf{Aufnahmemodus} \hfill\\  
 Die \gls{App} wechselt gerade in den Aufnahmemodus. Nach weiteren 30 Sekunden wird das Video verschl\"usselt auf dem lokalen Speicherbereich abgelegt. Zudem wird es nun unter ``noch nicht hochgeladene Unf\"alle'' angezeigt. 
+
+\item \textbf{Testen der Verschl\"usselung} \hfill\\
+Beim lokal verschl\"usselten Video wird getestet, ob das Video lesbar ist, bevor es entschl\"usselt wurde. Zudem wird getestet, ob das Video nach der Entschl\"usselung lesbar unverschl\"usselt vorliegt. 
 
 \item \textbf{Ansicht gespeicherte Videos} \hfill\\
 Die \gls{App} befindet sich in der Men\"uansicht. Nach dem Klicken des ``gespeicherte Videos'' Feldes werden alle lokal gespeicherten Videos angezeigt.
 
+\item \textbf{Löschen gespeicherter Videos} \hfill\\
+Die \gls{App} zeigt die lokal gespeicherten Videos. Nach dem Klicken des ``löschen'' Symbols eines Videos, wird eine Bestätigung zum löschen gezeigt. Durch klicken der Bestätigung wird das Video gelöscht.
+
 \item \textbf{Einstellungen} \hfill\\
 Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des ``Einstellungen'' Feldes werden die Einstellungen angezeigt.
 
-\item \textbf{Log-Out} \hfill\\
-Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des "Log-Out" Feldes wird der Benutzer aus seinem Account abgemeldet. Zus\"atzlich werden die Anmeldedaten gel\"oscht. Die \gls{App} ist nun in der Anmeldeansicht.
+\end{enumerate}
 
-\item \textbf{Testen der Verschl\"usselung} \hfill\\
-Beim lokal verschl\"usselten Video wird getestet, ob das Video lesbar ist, bevor es entschl\"usselt wurde. Zudem wird getestet, ob das Video nach der Entschl\"usselung lesbar unverschl\"usselt vorliegt.
+\subsubsection{\gls{Web-Dienst}}
+\begin{enumerate}[\bfseries{T}10]  
+\setcounter{enumi}{199}{}
+\item \textbf{\glslink{anonymisieren}{Anonymisierung} des Videos auf dem \gls{Web-Dienst}} \hfill\\  
+Der Web-Dienst hat ein Video das er verarbeiten muss. Das Video wird entschlüsselt, \glslink{anonymisieren}{anonymisiert} und anschließend gespeichert und mit dem Benutzeraccount verkn\"upft.
+
 \end{enumerate}
 
 \subsubsection{\gls{Web-Interface}}
 \begin{enumerate}[\bfseries{T}10]  
-\setcounter{enumi}{99}{}
+\setcounter{enumi}{299}{}
 \item \textbf{Account erstellen} \hfill\\
 Beim \"Offnen der Anmeldeseite besteht die Option, einen Account zu erstellen. Nach Eingabe g\"ultiger Benutzerdaten wird ein Account angelegt.
 
@@ -61,20 +83,14 @@ Beim eingeben existierender Benutzerdaten auf der Anmeldeseite wird der Benutzer
 Die Website zeigt die Standardansicht an. Die hochgeladenen Videos werden angezeigt. 
 
 \item \textbf{Video herunterladen} \hfill\\
-Die Website zeigt die Standardseite an. Bei jedem Video ist ein Button zum herunterladen. Beim Bet\"atigen dieses Buttons wird das Video unverschl\"usselt, jedoch \glslink{anonymisieren}{anonymisiert} heruntergeladen.
+Die Website zeigt die Standardseite an. Bei jedem Video ist ein Button zum herunterladen. Beim Bet\"atigen dieses Buttons wird eine Anfrage an den Web-Dienst geschickt.
 
 \item \textbf{Video l\"oschen} \hfill\\
-Die Website zeigt die Standardansicht an. Bei jedem Video ist ein Button zum l\"oschen des Videos. Beim Bet\"atigen dieses Buttons wird nach einer Best\"atigung das Video gel\"oscht.
+Die Website zeigt die Standardansicht an. Bei jedem Video ist ein Button zum l\"oschen des Videos. Beim Bet\"atigen dieses Buttons wird eine Anfrage an den Web-Dienst geschickt.
 
 \item \textbf{Account verwalten} \hfill\\
 Die Website zeigt die Accountverwaltung an. Der Benutzer f\"uhrt eine Account\"anderung durch. Beim n\"achsten Anmeldeversuch sind die ge\"anderten Anmeldedaten g\"ultig.
-\end{enumerate}
 
-\subsubsection{\gls{Web-Dienst}}
-\begin{enumerate}[\bfseries{T}10]  
-\setcounter{enumi}{99}{}
-\item \textbf{\glslink{anonymisieren}{Anonymisierung} des Videos auf dem \gls{Web-Dienst}} \hfill\\  
-Der Benutzer bet\"atigt die Funktion ``Video hochladen''. Das Video wird zum Server gesendet, dort \glslink{anonymisieren}{anonymisiert}, gespeichert und mit dem Benutzeraccount verkn\"upft.
 \end{enumerate}
 
 
@@ -92,16 +108,19 @@ Die \gls{App} zeigt die gespeicherten Videos an. Nach Bet\"atigen des ``hochlade
 
 \subsubsection{\gls{Web-Interface} <-> \gls{Web-Dienst}}
 \begin{enumerate}[\bfseries{T}10]  
-\setcounter{enumi}{99}{}
+\setcounter{enumi}{199}{}
 
 \item \textbf{Account erstellen} \hfill\\
 Der Benutzer erstellt \"uber das \gls{Web-Interface} einen Account. Durch den Button ``Account erstellen'' wird eine POST Anfrage an den \gls{Web-Dienst} gesendet und auf der Datenbank wird der Account hinzugef\"ugt.
 
-\item \textbf{Hochgeladene Videos anzeigen} \hfill\\
+\item \textbf{Account\"anderung} \hfill\\
+Der Benutzer will Anmeldedaten \"andern. Er gibt seine Änderungen ein und best\"atigt. Darauf wird eine Anfrage des \gls{Web-Interface} an den Server gesendet, dieser bearbeitet diese und liefert eine Antwort, welche dann vom \gls{Web-Interface} empfangen wird.
+
+\item \textbf{Anzeigen hochgeladener Videos} \hfill\\
 Die Website zeigt die Standardansicht an. Es wird vom \gls{Web-Interface} eine Anfrage an den \gls{Web-Dienst} geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der \gls{Web-Dienst} antwortet mit den hochgeladenen Videos des Benutzers und die Videos werden in der Standardansicht angezeigt. 
 
-\item \textbf{Passwort\"anderung} \hfill\\
-Der Benutzer will sein Passwort \"andern. Er gibt sein neues Passwort doppelt ein und best\"atigt die \"Anderungen. Darauf wird eine Anfrage des \gls{Web-Interface} an den Server gesendet, dieser bearbeitet diese und liefert eine Antwort, welche dann vom \gls{Web-Interface} in Form einer Benachrichtigung dargestellt wird.
+\item \textbf{Video herunterladen} \hfill\\
+Die Website zeigt die Standardseite an. Bei jedem Video ist ein Button zum herunterladen. Beim Bet\"atigen dieses Buttons wird das Video unverschl\"usselt, jedoch \glslink{anonymisieren}{anonymisiert} heruntergeladen.
 
 \item \textbf{Video l\"oschen} \hfill\\
 Die Website zeigt die Standardansicht. Der Benutzer ein Video l\"oschen. Er bet\"atigt den ``L\"oschen''-Button des Videos. Nach Best\"atigen des Vorgangs verschwindet das Video in der Ansicht und ist gel\"oscht.
@@ -113,5 +132,5 @@ Die Website zeigt die Standardansicht. Der Benutzer ein Video l\"oschen. Er bet\
 \setcounter{enumi}{99}{}
 
 \item \textbf{Systemtest} \hfill\\  
-Das System wird auf einer realen Umgebung installiert und mit Testdaten ge\"ullt. Die Software wird nun unter realen Bedingungen getestet.
+Das System wird von uns, durch testen unter realen Bedingungen, auf Vollständigkeit und Korrektheit der Funktionalität geprüft. Zudem erfolgt eine Überprüfung der Bedienbarkeit. 
 \end{enumerate}
