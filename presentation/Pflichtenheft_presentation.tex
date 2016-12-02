@@ -18,6 +18,7 @@
 % for widescreen slides (16:9), use 'beamerthemekitwide'
 
 \usepackage{templates/beamerthemekit}
+\usepackage{wrapfig}
 % \usepackage{templates/beamerthemekitwide}
 
 %% TITLE PICTURE
@@ -52,7 +53,7 @@
 \subtitle{App, Web-Interface und Web-Dienst}
 \author{Giorgio G., Christoph H., David L.,  Josh R.,  Fabian W.}
 
-\institute{Karlsruher Institut f\"ur Technologie, Fraunhofer Institut für Optronik, Systemtechnik und Bildauswertung}
+\institute{Karlsruher Institut f\"ur Technologie, Fraunhofer Institut f\"ur Optronik, Systemtechnik und Bildauswertung}
 
 % Bibliography
 
@@ -75,57 +76,146 @@
 	\begin{itemize}
 		\item Verschl\"usselnde Crashcam-App
 		\pause
-		\item Web-Dienst für Entschl\"usselung, Bildauswertung und Anonymisierung
+		\item Web-Dienst f\"ur Entschl\"usselung, Bildauswertung und Anonymisierung
 		\pause
 		\item Web-Interface zur Videoverwaltung
 	\end{itemize}
 \end{frame}
 
-\section{Verschl\"usselnde Crashcam-App}
-\begin{frame}{Verschl\"usselnde Crashcam-App}
-	\begin{itemize}
-		\item 2 Modi
-		\pause
-		\begin{itemize}
-			\item Beobachtungsmodus
-			\pause
-			\item Aufnahmemodus
-		\end{itemize}
-		\pause
-		\item Men\"u
-		\pause
-		\begin{itemize}
-			\item Kamera
-			\pause
-			\item Videos
-			\pause
-			\item Einstellungen
-		\end{itemize}
-	\end{itemize}
+\section{App}
+\begin{frame}{App}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Ansichten
+			\begin{itemize}
+				\item Kamera
+				\item Videos
+				\item Einstellungen
+				\pause
+			\end{itemize}
+			\item 2 Kamera-Modi
+			\begin{itemize}
+				\item Beobachtungsmodus
+				\begin{itemize}
+					\item Ringpuffer (1 min)
+				\end{itemize}
+				\item Aufnahmemodus
+				\begin{itemize}
+					\item verschl\"usseln
+					\item persistieren
+				\end{itemize}
+				\pause
+			\end{itemize}
+			\item Verschl\"usselung
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		\includegraphics[scale=0.075]{../subtopicsFuncspec/Res/Mockups/Portrait_camera_view_menu_phone}
+    \end{column}
+  \end{columns}
 \end{frame}
+
 
 \section{Web-Interface}
 \begin{frame}{Web-Interface}
-	\begin{itemize}
-		\item Accountverwaltung
-		\pause
-		\item Ansicht anonymisierter Videos
-	\end{itemize}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Accountverwaltung
+    				\begin{itemize}
+					\item Erstellen
+					\item \"Andern
+					\item L\"oschen
+				\end{itemize}
+			\pause
+			\item Ansicht anonymisierter Videos
+    				\begin{itemize}
+					\item Herunterladen
+					\item Info
+					\item L\"oschen
+				\end{itemize}
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		\includegraphics[scale=0.5]{../subtopicsFuncspec/Res/Mockups/Webinterface_small_pres}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \section{Web-Dienst}
 \begin{frame}{Web-Dienst}
 	\begin{itemize}
-		\item Nimmt Anfragen der App und des Web-Interface entgegen
+		\item Bearbeitet Anfragen der App und des Web-Interface entgegen
 		\pause
-		\item Analyse und Anonymisierung der Videos
+		\item Videoverarbeitung
+			\begin{itemize}
+				\item entschl\"usseln
+				\item analysieren
+				\item anonymisieren
+			\end{itemize}
 		\pause
 		\item Datenverwaltung
+			\begin{itemize}
+				\item Accountdaten
+				\item Videodaten
+			\end{itemize}
 	\end{itemize}
 \end{frame}
 
 \section{Organisation}
-\begin{frame}[allowframebreaks]{Organisation}
+
+\subsection{Aufgabenverteilung}
+\begin{frame}{Aufgabenverteilung}
+  \begin{columns}[T]
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+    			\item Christoph H.
+			\begin{itemize}
+				\item Anforderungen
+				\item Globale Testf\"alle
+				\item Web-Interface Demo
+			\end{itemize}
+		\item David L.
+			\begin{itemize}
+				\item Einrichtung JIRA, Github				
+				\item Globale Testf\"alle
+				\item Web-Interface Demo
+				\item Produktumgebung
+			\end{itemize}
+		\item Fabian W.
+			\begin{itemize}
+				\item Systemmodelle
+				\item Entwicklungsumgebung
+				\item Glossar
+				\item Pr\"asentation
+			\end{itemize}
+    		\end{itemize}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    		\begin{itemize}
+		\item Giorgio G.
+			\begin{itemize}
+				\item Zielbestimmung
+				\item Anforderungen
+				\item App-Demo
+				\item Produkteinsatz
+				\item Produktdaten
+			\end{itemize}
+		\item Josh R.
+			\begin{itemize}
+				\item Anforderungen
+				\item Entwicklungsumgebung
+				\item Stilkorrektur
+				\item Glossar
+			\end{itemize}
+	\end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\subsection{JIRA}
+\begin{frame}[allowframebreaks]{JIRA}
 	\begin{figure}
 		\begin{center}
 			\includegraphics[scale=0.18]{logos/JIRA01} 
@@ -134,7 +224,12 @@
 		\begin{center}
 			\includegraphics[scale=0.18]{logos/JIRA02} 
 		\end{center}
-		\framebreak
+	\end{figure}				
+\end{frame}
+
+\subsection{Github}
+\begin{frame}[allowframebreaks]{Github}
+	\begin{figure}
 		\begin{center}
 			\includegraphics[scale=0.20]{logos/Github} 
 		\end{center}
