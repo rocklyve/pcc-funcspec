@@ -37,13 +37,13 @@ Bei Start der App wird die Kameraansicht gezeigt und die App befindet sich im Be
 Im Beobachtungsmodus wird der \gls{Ringpuffer} beschrieben.
 
 \item \textbf{Stoppen des Beobachtungsmodus} \hfill\\  
-Die \gls{App} befindet sich im Beobachtungsmodus. Wird die App geschlossen, oder die Kameraansicht beendet so wird der Beobachtungsmodus beendet.
+Die \gls{App} befindet sich im Beobachtungsmodus. Wird die App geschlossen oder die Kameraansicht beendet so wird der Beobachtungsmodus beendet.
 
 \item \textbf{Aufnahmemodus manuell starten} \hfill\\
 Die \gls{App} befindet sich im Beobachtungsmodus. Durch doppeltes Dr\"ucken des Bildschirms wird in den Aufnahmemodus gewechselt. 
 
-\item \textbf{Ausl\"osen des \glslink{G-Sensor}{G-Sensors}} \hfill\\  
-Die \gls{App} befindet sich im Beobachtungsmodus. Löst der \gls{G-Sensor} des Ger\"ats aus, so wird in den Aufnahmemodus gewechselt.
+\item \textbf{Ausl\"osen der Aufnahme} \hfill\\  
+Die \gls{App} befindet sich im Beobachtungsmodus. Überschreitet die durch den \gls{G-Sensor} gemessene Beschläunigung, so wird in den Aufnahmemodus gewechselt.
 
 \item \textbf{Aufnahmemodus} \hfill\\  
 Die \gls{App} wechselt gerade in den Aufnahmemodus. Nach 30 Sekunden wird der Inhalt des Ringpuffers verschl\"usselt auf dem internen Speicherbereich abgelegt. Zudem wird das gespeicherte Video nun unter ``Videos'' angezeigt. 
@@ -52,13 +52,13 @@ Die \gls{App} wechselt gerade in den Aufnahmemodus. Nach 30 Sekunden wird der In
 Es wird die Korrektheit der Ver- bzw. Entschlüsselung der Videos überprüft.
 
 \item \textbf{Ansicht gespeicherter Videos} \hfill\\
-Die \gls{App} befindet sich in der Men\"uansicht. Nach dem Klicken des ``gespeicherte Videos'' Feldes werden alle gespeicherten Videos angezeigt.
+Die \gls{App} befindet sich in der Men\"uansicht. Nach dem Klicken des ``Videos''-Feldes werden alle gespeicherten Videos angezeigt.
 
 \item \textbf{Löschen gespeicherter Videos} \hfill\\
-Die \gls{App} zeigt die gespeicherten Videos. Nach dem Klicken des Löschen-Symbols, wird ein Bestätigungsdialog  gezeigt. Durch Klicken der Bestätigung wird das Video gelöscht.
+Die \gls{App} zeigt die gespeicherten Videos. Nach dem Klicken des Löschen-Symbols wird ein Bestätigungsdialog gezeigt. Akzeptiert der Nutzer wird das Video gelöscht.
 
 \item \textbf{Einstellungen} \hfill\\
-Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des ``Einstellungen'' Feldes werden die Einstellungen angezeigt.
+Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des ``Einstellungen''-Feldes werden die Einstellungen angezeigt.
 
 \end{enumerate}
 
@@ -94,7 +94,7 @@ Die Website zeigt die Accountverwaltung an. Der Benutzer f\"uhrt eine Account\"a
 Die \gls{App} zeigt das Anmeldefenster an. Der Benutzer gibt seine Anmeldedaten ein. Die Daten werden an den \gls{Web-Dienst} geschickt und verifiziert. Ist die Anmeldung erfolgreich, bestätigt der Web-Dienst dies.
 
 \item \textbf{Video hochladen} \hfill\\
-Die \gls{App} zeigt die gespeicherten Videos an. Nach Bet\"atigen des ``Hochladen''-Buttons wird das Video auf den \gls{Web-Dienst} hochgeladen, gesichtert und mit dem Benutzeraccount verkn\"upft.
+Die \gls{App} zeigt die gespeicherten Videos an. Nach Bet\"atigen des ``Hochladen''-Buttons wird das Video an den \gls{Web-Dienst} gesendet, der es sichert und mit dem Benutzeraccount verkn\"upft.
 \end{enumerate}
 
 \subsubsection{\gls{Web-Interface} <-> \gls{Web-Dienst}}
@@ -105,10 +105,10 @@ Die \gls{App} zeigt die gespeicherten Videos an. Nach Bet\"atigen des ``Hochlade
 Der Benutzer erstellt \"uber das \gls{Web-Interface} einen Account. Durch den Button ``Account erstellen'' wird eine Anfrage an den \gls{Web-Dienst} gesendet und der Account wird auf der Datenbank hinzugef\"ugt.
 
 \item \textbf{Account\"anderung} \hfill\\
-Der Benutzer will Anmeldedaten \"andern. Er gibt seine Änderungen ein und best\"atigt. Darauf wird eine Anfrage des \gls{Web-Interface} an den Server gesendet, der die Daten entsprechend ändert.
+Der Benutzer will seine Anmeldedaten \"andern. Er gibt seine Änderungen ein und best\"atigt diese. Darauf hin wird eine Anfrage des \gls{Web-Interface} an den Server gesendet, der die Änderungen entsprechend übernimmt.
 
 \item \textbf{Anzeigen hochgeladener Videos} \hfill\\
-Der Benutzer gelangt in zu der Liste seiner Videos. Es wird  eine Anfrage an den \gls{Web-Dienst} geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der Web-Dienst antwortet mit den hochgeladenen Videos des Benutzers und die Videos werden in der angezeigt. 
+Der Benutzer gelangt in zu der Liste seiner Videos. Es wird  eine Anfrage an den \gls{Web-Dienst} geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der Web-Dienst antwortet mit den hochgeladenen Videos des Benutzers und die Videos werden in der Liste angezeigt. 
 
 \end{enumerate}
 

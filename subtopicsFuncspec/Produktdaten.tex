@@ -1,32 +1,32 @@
 \chapter{Produktdaten}
-Zur Verwendung des Produktes werden vom jeweiligen Teil der Software Daten angefordert und somit auch abgelegt, die jedoch haupts\"achlich auf der Datenbank des Servers gespeichert sind.
+Bei der Verwendung des Produktes werden vom jeweiligen Teil der Software Daten erhoben und entsprechend auf dem Server oder dem \gls{Smartphone} abgelegt.
 \section{App-Daten}
 \begin{enumerate}[\bfseries{PD}10]
 	\setcounter{enumi}{99}
-\item Kundendaten \hfill \\
-Es werden Nachname, Vorname sowie die E-Mail Adresse des Kunden abglegt.
-\item Einstellungen \hfill \\
-Es werden Einstellungen der Kamera, sprich die Auflösung der Aufnahme gespeichert.
-\item Ringpuffer \hfill \\
-Es werden eine Minute an Video Material im Ringpuffer gespeichert.
-\item Videodaten \hfill \\
-Es werden Videodaten, sowie Ort und Zeit in die Meta-Daten des Videos gespeichert.
+\item \textbf{Kundendaten} \hfill \\
+Es wird die E-Mail Adresse des Kunden abglegt.
+\item \textbf{Einstellungen} \hfill \\
+Es werden Einstellungen der Kamera, die aus Auflösung, Bilder pro Sekunde und \gls{Ringpuffer}länge bestehen, gespeichert.
+\item \textbf{\gls{Ringpuffer}} \hfill \\
+Es wird eine Minute Videomaterial im \gls{Ringpuffer} gespeichert.
+\item \textbf{Videodaten} \hfill \\
+Neben den aufgezeichneten Videodaten werden Zeit und Auslöseart in die \gls{Metadaten} des Videos gespeichert.
 \end{enumerate}
 
 \section{Web-Service}
 \begin{enumerate}[\bfseries{PK}10]
 	\setcounter{enumi}{199}
-\item Videodaten \hfill \\
-Es werden Temporär Videodaten, sowie Ort und Zeit in den Meta-Daten des Videos gespeichert.
-\item Kundendaten \hfill \\
-Es werden Nachname, Vorname sowie die E-Mail Adresse des Kunden in einer Datenbank gespeichert. Jeder Kunde bekommt eine einzigartige ID zugewiesen. 
+\item \textbf{Videodaten} \hfill \\
+Es werden neben den Videodaten Zeit und Auslöseart in die \gls{Metadaten} des Videos gespeichert. Die Daten werden nach einer bestimmten Zeit wieder gelöscht.
+\item \textbf{Nutzerdaten} \hfill \\
+Es werden die \gls{E-Mail}-Adresse und der \gls{Hash-Code} des Passwortes des Nutzers in einer Datenbank gespeichert. Jeder Nutzer bekommt eine einzigartige ID zugewiesen. 
 \end{enumerate}
 
 \section{Webinterface Daten}
 \begin{enumerate}[\bfseries{PK}10]
 	\setcounter{enumi}{299}
-\item Daten \hfill \\
-Es werden keine Daten auf dem Webinterface gespeichert. Alle Informationen werden mit REST-Anfragen vom Webservice abgerufen.
+\item \textbf{Daten} \hfill \\
+Es werden keine Daten auf dem \gls{Web-Interface} gespeichert. Alle Informationen werden mit REST-Anfragen vom \gls{Web-Dienst} abgerufen.
 \end{enumerate}
 
 

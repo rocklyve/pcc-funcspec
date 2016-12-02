@@ -12,7 +12,7 @@ Der Benutzer kann hierbei mehrere Aktionen ausführen:
 \item Videos verwalten
 \item Manuelle Speicherung beginnen
 \end{itemize}
-Um die \gls{App} zu nutzen, muss sich der Benutzer zunächst auf der \gls{App} einloggen. Nach dem Einloggen kann der Benutzer sein aufgenommenes Videomaterial verwalten. Er kann z.B. Videos löschen, oder auf den \gls{Web-Dienst} hochladen.
+Um die \gls{App} zu nutzen, muss sich der Benutzer zunächst auf der \gls{App} einloggen. Nach dem Einloggen kann der Benutzer sein aufgenommenes Videomaterial verwalten. Er kann z.B. Videos löschen oder an den \gls{Web-Dienst} senden.
 Ist er in der Beobachtungsansicht, so ist es dem Nutzer möglich die Manuelle Speicherung des Videomaterials zu iniziieren.
 
 \subsection{Bedienung der Website}
@@ -23,33 +23,33 @@ Dieser Anwendungsfall beschreibt die Bedienung der Website.
 Der Benutzer kann hierbei mehrere Aktionen ausführen:
 \begin{itemize}
 \itemsep0pt
-\item Login durchführen
+\item Anmelden
 \item Registrieren
 \item Benutzerdaten ändern
 \item Verifizierung an Benutzer
 \end{itemize}
-Um die Website zu nutzen, muss sich der Benutzer zunächst registrieren. Nach der Registrierung und Änderung von Benutzerdaten schickt der \gls{Web-Dienst} eine Verifizierungs-\gls{E-Mail} an den Benutzer. Nach der Bestätigung kann sich er sich auf der Webseite anmelden um deren Funktion zu nutzen. Ist der Benutzer eingeloggt, kann er seine Benutzerdaten ändern und zuvor hochgeladene, nun anonymisierte Videodaten herunterladen.
+Um die Website zu nutzen, muss sich der Benutzer zunächst registrieren. Nach der Registrierung schickt der \gls{Web-Dienst} eine Verifizierungs-\gls{E-Mail} an den Benutzer. Nach der Bestätigung kann er sich auf der Webseite anmelden um deren Funktionen zu nutzen. Ist der Benutzer eingeloggt, kann er seine Benutzerdaten ändern und zuvor hochgeladene, nun anonymisierte Videodaten herunterladen.
 
 \section{Aktivitätsdiagramm}
 \subsection{Von Appstart bis Videofreigabe}
 \begin{center}
 \includegraphics[width=1\textwidth]{subtopicsFuncspec/Res/systemModels/AKDiagramm.png}
 \end{center}
-Dieses Aktivitätsdiagramm beschreibt den Ablauf vom Start der \gls{App} bis zur Freigabe und dem Runterladen der Videodaten. 
+Dieses Aktivitätsdiagramm beschreibt den Ablauf vom Start der \gls{App} bis zur Freigabe und dem Herunterladen der Videodaten. 
 \begin{enumerate}
 \itemsep0pt
 \item Öffnen der \gls{App}
-\item Einloggen in die \gls{App}
+\item Anmelden in der \gls{App}
 \begin{description}
-\item Der Benutzer loggt sich mit seinen Anmeldedaten in die \gls{App} ein um die Funktionen zu nutzen.
+\item Der Benutzer meldet sich mit seinen Anmeldedaten in der \gls{App} an um die Funktionen zu nutzen.
 \end{description}
 \item Speicherung beginnen
 \begin{enumerate}
-\item Auslösen des \gls{G-Sensor}
+\item Durch \gls{G-Sensor}
 \begin{description}
-\item Der \gls{G-Sensor} löst aus da er den festgelegten Richtwert überschritten hat.
+\item Die vom \gls{G-Sensor} gemessene Beschleunigung ist größer als der festgelegten Richtwert.
 \end{description}
-\item Manuelle Speicherung aktivieren
+\item Manuell
 \begin{description}
 \item Der Benutzer fordert manuell die Speicherung an.
 \end{description}
@@ -61,17 +61,17 @@ Dieses Aktivitätsdiagramm beschreibt den Ablauf vom Start der \gls{App} bis zur
 \item Videodaten auswählen
 \item Videodaten hochladen
 \begin{description}
-\item Die ausgewählten Videodaten wird auf den \gls{Web-Dienst} hochgeladen.
+\item Die ausgewählten Videodaten werden an den \gls{Web-Dienst} gesendet.
 \end{description}
 \item Videodaten entschlüsseln
 \item Videodaten \gls{anonymisieren}
 \begin{description}
-\item Nach der Entschlüsselung der Videodaten, anonymisiert der \gls{Web-Dienst} diese.
+\item Nach der Entschlüsselung der Videodaten anonymisiert der \gls{Web-Dienst} diese.
 \end{description}
 \item Videodaten speichern
 \item Videodaten freigeben
 \begin{description}
-\item Die Videodaten werden dem Benutzer auf der \gls{Web-Interface} zugänglich gemacht.
+\item Die Videodaten werden dem Benutzer über das \gls{Web-Interface} zugänglich gemacht.
 \end{description}
 \item Videodaten herunterladen
 \begin{description}

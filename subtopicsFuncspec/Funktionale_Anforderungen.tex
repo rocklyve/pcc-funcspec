@@ -143,6 +143,11 @@ Wenn der Nutzer seinen Account löschen will werden zunächst alle, von ihm hoch
 \item \label{fa:accÄndern}\textbf{Accountdaten ändern} \hfill \\
 Hat der Nutzer seine Accountdaten geändert~\eqref{fa:accDatBearb}, so werden die Änderungen entsprechend auf dem Server hinterlegt.
 
+\item \label{fa:speichVideo}\textbf{Abspeichern eines \glslink{anonymisieren}{anonymisierten} Videos} \hfill \\
+Nachdem das Video anonymisiert wurde, wird es lokal auf dem Server gespeichert und alle temporären Dateien gelöscht. Das gespeicherte Video wird der Videoverwaltung hinzugefügt damit es vom Benutzer eingesehen und bearbeitet werden kann. Wenn ein Benutzer die maximale Anzahl Videos pro Account ~\eqref{na:VideoKap} überschreitet, wir automatisch das älteste Video des Accounts auf dem Server gelöscht.
+
+\item  \label{fa:fehlerbehandlung}\textbf{Fehlerbehandlung für nicht mehr existierende Daten} \hfill \\
+Werden bei einer Anfrage Daten angefragt, die nicht mehr existieren, so wird ein Fehler zurückgegeben.
 \end{enumerate}
 
 
@@ -173,7 +178,7 @@ Hat sich ein Benutzer eingeloggt, wird er automatisch auf diese Ansicht weiterge
 Durch einen Klick auf das ``Herunterlade-Icon'' wird ein Speicherdialog geöffnet. Nachdem der Nutzer einen Speicherort ausgewählt hat, wird das Video heruntergeladen~\eqref{fa:vidHerunterladen}. Bricht der Benutzer den Dialog ab, bleibt er in der Listenansicht seiner Videos.
 
 \item \label{fa:anonymVidlösch}\textbf{Löschen eines \glslink{anonymisieren}{anonymisierten} Videos} \hfill \\
-Durch den Klick auf das ``Löschen-Symbol'' wird ein Bestätigungsdialog geöffnet. Falls der Benutzer bestätigt, wird das Video aus der Liste seiner hochgeladenen Videos entfernt und vom Server gelöscht~\eqref{fa:vidLöschen}. Bricht der Benutzer den Dialog ab, bleibt er in der Listenansicht seiner Videos.
+Durch den Klick auf das ``Löschen-Symbol'' wird ein Bestätigungsdialog geöffnet. Falls der Benutzer bestätigt, wird das Video aus der Liste seiner hochgeladenen Videos entfernt und vom Server gelöscht~\eqref{fa:vidLöschen}. Bricht der Benutzer den Dialog ab, bleibt er in der Listenansicht seiner Videos. Videos werden auch gelöscht nachdem der Nutzer mehr Videos hochgeladen hat als zulässig~\eqref{na:VideoKap} ist. Dabei wird das älteste Video zuerst gelöscht.
 
 \item \label{fa:anonymViddaten}\textbf{Einsehen von Video-Daten der \glslink{anonymisieren}{anonymisierten} Videos} \hfill \\
 Klickt der Benutzer auf das ``Info-Symbol'', so wird ein Fenster geöffnet, das dem Benutzer die Video-\gls{Metadaten} (Erstellungsdatum, Datum der Anonymisierung, Größe, Auflösung, Dauer) anzeigt.
