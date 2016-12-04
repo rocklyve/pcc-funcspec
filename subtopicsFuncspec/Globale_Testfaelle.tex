@@ -1,6 +1,6 @@
 \chapter{Globale Testf\"alle}
 \section{Erkl\"arung zur Qualit\"atssicherung}
-Wir teilen die Testphase in mehrere Teilphasen ein, um sowohl Komponenten für sich als auch ihr zusammenarbeiten separat zu testen. Automatisierte Tests werden das Backend und Frontend testen. Zudem werden manuelle Tests, zur überpr\"ufung der Bedienbarkeit, durchgef\"uhrt.  Das Ziel ist, 80 Prozent des geschriebenen Codes ausf\"uhrlich zu testen.
+Wir teilen die Testphase in mehrere Teilphasen ein, um sowohl Komponenten für sich, als auch ihr Zusammenarbeiten separat zu testen. Automatisierte Tests werden das Backend und Frontend testen. Zudem werden manuelle Tests zur \"Uberpr\"ufung der Bedienbarkeit durchgef\"uhrt.  Das Ziel ist, 80 Prozent des geschriebenen Codes ausf\"uhrlich zu testen.
 
 \subsection{Komponenten-Tests}
 In den Komponenten-Tests werden wir unsere drei Komponenten, die \gls{App}, das \gls{Web-Interface} und den \gls{Web-Dienst}, unabhängig voneinander testen.
@@ -12,13 +12,13 @@ In den Integration-Tests wird die Kommunikation zwischen den Komponenten geteste
 Die Software wird in einer realen Umgebung installiert und dort unter realen Bedingungen von uns getestet.
 
 \section{Testszenarien}
-\subsection{Komponententests}
+\subsection{Komponenten-Tests}
 
 \subsubsection{\gls{App}}
 \begin{enumerate}[\bfseries{TK}10]  
 \setcounter{enumi}{99}{}
 
-\item \textbf{Erstmaliges starten der \gls{App}} \hfill\\  
+\item \textbf{Erstmaliges Starten der \gls{App}} \hfill\\  
 Beim ersten Start der App wird die Anmeldeansicht angezeigt.
 
 \item \textbf{Accountanmeldung} \hfill\\  
@@ -28,22 +28,22 @@ In der Anmeldeansicht wird der Benutzer aufgefordert, sich anzumelden. Nach erfo
 Die \gls{App} befindet sich im Beobachtungsmodus. Nach Klicken des Men\"ubuttons wird das Men\"u angezeigt.
 
 \item \textbf{Accountabmeldung} \hfill\\  
-Die App zeigt das Men\"u. Klickt der Benutzer auf abmelden, werden die Benutzerdaten von der App gelöscht und er gelangt zur Anmeldeansicht.
+Die App zeigt das Men\"u. Klickt der Benutzer auf ``abmelden'', werden die Benutzerdaten von der App gelöscht und er gelangt zur Anmeldeansicht.
 
 \item \textbf{Starten der \gls{App} nach Erstanmeldung} \hfill\\  
-Bei Start der App wird die Kameraansicht gezeigt und die App befindet sich im Beobachtungsmodus.
+Bei Start der App wird die Kameraansicht gezeigt, und die App befindet sich im Beobachtungsmodus. %KOMMA MUSS DA SEIN!!!
 
 \item \textbf{Beobachtungsmodus} \hfill\\
 Im Beobachtungsmodus wird der \gls{Ringpuffer} beschrieben.
 
 \item \textbf{Stoppen des Beobachtungsmodus} \hfill\\  
-Die \gls{App} befindet sich im Beobachtungsmodus. Wird die App geschlossen oder die Kameraansicht beendet so wird der Beobachtungsmodus beendet.
+Die \gls{App} befindet sich im Beobachtungsmodus. Wird die App geschlossen oder die Kameraansicht beendet, so wird der Beobachtungsmodus beendet.
 
 \item \textbf{Aufnahmemodus manuell starten} \hfill\\
 Die \gls{App} befindet sich im Beobachtungsmodus. Durch doppeltes Dr\"ucken des Bildschirms wird in den Aufnahmemodus gewechselt. 
 
 \item \textbf{Ausl\"osen der Aufnahme} \hfill\\  
-Die \gls{App} befindet sich im Beobachtungsmodus. Überschreitet die durch den \gls{G-Sensor} gemessene Beschläunigung, so wird in den Aufnahmemodus gewechselt.
+Die \gls{App} befindet sich im Beobachtungsmodus. Überschreitet die durch den \gls{G-Sensor} gemessene Beschleunigung, so wird in den Aufnahmemodus gewechselt.
 
 \item \textbf{Aufnahmemodus} \hfill\\  
 Die \gls{App} wechselt gerade in den Aufnahmemodus. Nach 30 Sekunden wird der Inhalt des Ringpuffers verschl\"usselt auf dem internen Speicherbereich abgelegt. Zudem wird das gespeicherte Video nun unter ``Videos'' angezeigt. 
@@ -52,13 +52,13 @@ Die \gls{App} wechselt gerade in den Aufnahmemodus. Nach 30 Sekunden wird der In
 Es wird die Korrektheit der Ver- bzw. Entschlüsselung der Videos überprüft.
 
 \item \textbf{Ansicht gespeicherter Videos} \hfill\\
-Die \gls{App} befindet sich in der Men\"uansicht. Nach dem Klicken des ``Videos''-Feldes werden alle gespeicherten Videos angezeigt.
+Die \gls{App} befindet sich in der Men\"uansicht. Nach dem Klicken des ``Video''-Feldes werden alle gespeicherten Videos angezeigt.
 
 \item \textbf{Löschen gespeicherter Videos} \hfill\\
-Die \gls{App} zeigt die gespeicherten Videos. Nach dem Klicken des Löschen-Symbols wird ein Bestätigungsdialog gezeigt. Akzeptiert der Nutzer wird das Video gelöscht.
+Die \gls{App} zeigt die gespeicherten Videos. Nach dem Klicken des Löschen-Symbols wird ein Bestätigungsdialog gezeigt. Akzeptiert der Nutzer, wird das Video gelöscht.
 
 \item \textbf{Einstellungen} \hfill\\
-Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des ``Einstellungen''-Feldes werden die Einstellungen angezeigt.
+Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des Feldes ``Einstellungen'' werden die Einstellungen angezeigt.
 
 \end{enumerate}
 
@@ -66,7 +66,7 @@ Die \gls{App} befindet sich in der Men\"uansicht. Durch Klicken des ``Einstellun
 \begin{enumerate}[\bfseries{TK}10]  
 \setcounter{enumi}{199}{}
 \item \textbf{\glslink{anonymisieren}{Anonymisierung} des Videos auf dem \gls{Web-Dienst}} \hfill\\  
-Der Web-Dienst hat ein zu verarbeitendes Video. Das Video wird zunächst entschlüsselt, \glslink{anonymisieren}{anonymisiert} anschließend gespeichert und mit dem Benutzeraccount verkn\"upft.
+Der Web-Dienst hat ein zu verarbeitendes Video. Das Video wird zunächst entschlüsselt und  \glslink{anonymisieren}{anonymisiert}, anschließend gespeichert und mit dem Benutzeraccount verkn\"upft.
 
 \end{enumerate}
 
@@ -102,13 +102,13 @@ Die \gls{App} zeigt die gespeicherten Videos an. Nach Bet\"atigen des ``Hochlade
 \setcounter{enumi}{199}{}
 
 \item \textbf{Account erstellen} \hfill\\
-Der Benutzer erstellt \"uber das \gls{Web-Interface} einen Account. Durch den Button ``Account erstellen'' wird eine Anfrage an den \gls{Web-Dienst} gesendet und der Account wird auf der Datenbank hinzugef\"ugt.
+Der Benutzer erstellt \"uber das \gls{Web-Interface} einen Account. Durch den Button ``Account erstellen'' wird eine Anfrage an den \gls{Web-Dienst} gesendet, und der Account wird auf der Datenbank hinzugef\"ugt.
 
 \item \textbf{Account\"anderung} \hfill\\
-Der Benutzer will seine Anmeldedaten \"andern. Er gibt seine Änderungen ein und best\"atigt diese. Darauf hin wird eine Anfrage des \gls{Web-Interface} an den Server gesendet, der die Änderungen entsprechend übernimmt.
+Der Benutzer will seine Anmeldedaten \"andern. Er gibt seine Änderungen ein und best\"atigt diese. Daraufhin wird eine Anfrage des \gls{Web-Interface} an den Server gesendet, der die Änderungen entsprechend übernimmt.
 
 \item \textbf{Anzeigen hochgeladener Videos} \hfill\\
-Der Benutzer gelangt in zu der Liste seiner Videos. Es wird  eine Anfrage an den \gls{Web-Dienst} geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der Web-Dienst antwortet mit den hochgeladenen Videos des Benutzers und die Videos werden in der Liste angezeigt. 
+Der Benutzer gelangt in zu der Liste seiner Videos. Es wird  eine Anfrage an den \gls{Web-Dienst} geschickt, die alle hochgeladenen Videos dieses Benutzers anfordert. Der Web-Dienst antwortet mit den hochgeladenen Videos des Benutzers, und die Videos werden in der Liste angezeigt. 
 
 \end{enumerate}
 
@@ -117,5 +117,5 @@ Der Benutzer gelangt in zu der Liste seiner Videos. Es wird  eine Anfrage an den
 \setcounter{enumi}{99}{}
 
 \item \textbf{Systemtest} \hfill\\  
-Das System wird von uns durch Testen unter realen Bedingungen, auf Vollständigkeit und Korrektheit der Funktionalität geprüft. Zudem erfolgt eine Überprüfung der Bedienbarkeit. 
+Das System wird von uns durch Testen unter realen Bedingungen auf Vollständigkeit und Korrektheit der Funktionalität geprüft. Zudem erfolgt eine Überprüfung der Bedienbarkeit. 
 \end{enumerate}
